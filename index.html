@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CNY_TEST</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/keyframes.css"/>
+</head>
+<body>
+<!--加载动画 -->
+<div class="loading">
+    <div class="loading_wrap">
+        <div class="load_img1"></div>
+        <div class="load_img2"></div>
+        <div class="load_img3"></div>
+        <div class="load_img4">100%</div>
+        <div class="load_img5"></div>
+    </div>
+</div>
+<!--主体页面 -->
+<article id="main">
+    <!--联系列表-->
+    <div id="foldbox" class="foldbox">
+        <h4 class="foldbox_title">联系方式</h4>
+        <ul class="foldbox_con">
+            <li>Tel：13960392037</li>
+            <li>QQ：845257580</li>
+            <li>WeChat：gudulvren000</li>
+            <li>Email：gulvren@qq.com</li>
+        </ul>
+    </div>
+    <div class="qr_code">
+    <div class="qr_code_big"></div>
+    </div>
+    <section id="content">
+    <header id="header"></header>
+    <section id="content_wrap">
+    </section>
+    <footer id="footer">
+    页脚
+    </footer>
+    </section>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+    <p>afdd</p>
+</article>
+</body>
+</html>
+<script src="js/jquery-1.11.1.js"></script>
+<script src="js/sea.js"></script>
+<script>
+    seajs.use(['./js/global','./js/loading'], function (global,Loading) {
+        //全局的一些配置
+        global.init();
+
+        /*加载动画*/
+        //预加载图片列表
+        var aImg = ['http://pic31.nipic.com/20130719/5252423_201432520000_2.jpg',
+            'http://pic87.huitu.com/res/20160929/554342_20160929155535330010_1.jpg',
+            'http://pic31.nipic.com/20130717/5252423_124607284000_2.jpg',
+            'http://pic1.nipic.com/2009-03-06/2009369438164_2.jpg',
+            'http://img13.poco.cn/mypoco/myphoto/20120715/02/65940800201207150254252991122436108_011.jpg'];
+        var loading = new Loading(aImg);
+
+        loading.start(function () {
+            $('#main').fadeIn(500, 'linear', function () {
+                alert('ok');
+            });
+        });
+
+    });
+</script>

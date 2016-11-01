@@ -1,0 +1,165 @@
+/* reset */
+body, h1, h2, h3, h4, h5, h6, p, dl, dd, ul, ol, form, input, textarea, th, td, select {
+    margin: 0;
+    padding: 0;
+}
+
+em {
+    font-style: normal;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    border: none;
+    vertical-align: top;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+input, textarea {
+    outline: none;
+}
+
+textarea {
+    resize: none;
+    overflow: auto;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    min-width: 1000px;
+    font-size: 12px;
+    font-family: "微软雅黑";
+    position: relative;
+}
+
+/* end reset */
+
+/*loading begin*/
+.loading {
+    /*bacground: url(../images/loading_bg.png) repeat-x;*/
+}
+
+.loading_wrap {
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -60px;
+    position: absolute;
+    transition: 1s;
+}
+
+/*.loading_wrap:hover .load_img2,.loading_wrap:hover .load_img3{*/
+/*animation-play-state:paused;*/
+/*-webkit-animation-play-state:paused;*/
+/*}*/
+.loading_wrap, .load_img1, .load_img2, .load_img3, .load_img4, .load_img5 {
+    width: 120px;
+    height: 100px;
+    position: absolute;
+}
+
+.load_img1 {
+    background: url(../images/loading1.png) no-repeat left center;
+}
+
+.load_img2 {
+    -webkit-animation: loading2 1s ease infinite;
+    -o-animation: loading2 1s ease infinite;
+    animation: loading2 1s ease infinite;
+    background: url(../images/loading2.png) no-repeat left center;
+}
+
+.load_img4 {
+    text-align: center;
+    line-height: 100px;
+    color: #f58e6e;
+}
+
+.load_img3 {
+    -webkit-animation: loading3 1s ease infinite;
+    -o-animation: loading3 1s ease infinite;
+    animation: loading3 1s ease infinite;
+    background: url(../images/loading3.png) no-repeat left center;
+}
+
+.load_img5 {
+    background: url(../images/loading5.png) no-repeat left center;
+}
+/*loading end*/
+
+/*main begin*/
+#main {
+    width:100%;
+    height:100%;
+    display: none;
+    background:url(../images/main_bg.jpg) no-repeat center top ;
+}
+/*main begin*/
+
+/*foldbox begin*/
+.foldbox {
+    top: 0;
+    right:60px;
+    position: fixed;
+}
+.foldbox_title {
+    width: 92px;
+    height: 28px;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: left;
+    padding-top: 26px;
+    padding-left: 54px;
+    background: url(../images/foldbox_bg.png) no-repeat left top;
+}
+.foldbox_con li {
+    width: 146px;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+    margin-bottom:1px;
+    background:#ffffff;
+}
+/*foldbox end*/
+
+/*qr_cond begin*/
+.qr_code {
+    width: 18px;
+    height: 18px;
+    right: 60px;
+    bottom: 100px;
+    position: fixed;
+    border: 6px solid  rgba(0, 0, 0, 0.6);
+    background:rgba(0, 0, 0, 0.6) url(../images/qr_code_litte_bg.png) no-repeat left center;
+}
+.qr_code_big {
+    width: 130px;
+    height: 130px;
+    left: -136px;
+    top: -136px;
+    transition: 0.5s;
+    position: absolute;
+    transform: scale(0);
+    transform-origin: right bottom;
+    background: url(../images/qr_code_big.jpg) no-repeat left center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.qr_code:hover .qr_code_big,.qr_code_big:hover {
+    transform: scale(1);
+}
+/*qr_cond end*/
