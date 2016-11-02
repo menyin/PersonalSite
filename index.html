@@ -30,110 +30,66 @@
         </ul>
     </div>
     <div class="qr_code">
-    <div class="qr_code_big"></div>
+        <div class="qr_code_big"></div>
     </div>
     <section id="content">
-    <header id="header"></header>
-    <section id="content_wrap">
+        <header id="header">
+            <div class="brand">
+                <div class="brand_circle">
+                </div>
+                <h1 class="brand_address">
+                    <span>C</span>
+                    <span>H</span>
+                    <span>E</span>
+                    <span>N</span>
+                    <span>N</span>
+                    <span>Y</span>
+                    <span>.</span>
+                    <span>C</span>
+                    <span>O</span>
+                    <span>M</span>
+                </h1>
+            </div>
+            <nav class="menu">
+                <a href="#"><span>首页</span></a>
+                <a href="#"><span>项目</span></a>
+                <a href="#"><span>技能</span></a>
+                <a href="#"><span>履历</span></a>
+                <a href="#"><span>留言</span></a>
+            </nav>
+        </header>
+        <section id="content_wrap">
+        </section>
+        <footer id="footer">
+            页脚
+        </footer>
     </section>
-    <footer id="footer">
-    页脚
-    </footer>
-    </section>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
-    <p>afdd</p>
 </article>
 </body>
 </html>
 <script src="js/jquery-1.11.1.js"></script>
+<script src="js/jquery-animte-extend.js"></script>
 <script src="js/sea.js"></script>
 <script>
-    seajs.use(['./js/global','./js/loading'], function (global,Loading) {
+    var importModule = ['./js/Global', './js/Loading', './js/Foldbox', './js/Brand'];
+    seajs.use(importModule, function (Global, Loading, Foldbox, Brand) {
         //全局的一些配置
-        global.init();
+        Global.init();
 
         /*加载动画*/
         //预加载图片列表
-        var aImg = ['http://pic31.nipic.com/20130719/5252423_201432520000_2.jpg',
-            'http://pic87.huitu.com/res/20160929/554342_20160929155535330010_1.jpg',
-            'http://pic31.nipic.com/20130717/5252423_124607284000_2.jpg',
-            'http://pic1.nipic.com/2009-03-06/2009369438164_2.jpg',
-            'http://img13.poco.cn/mypoco/myphoto/20120715/02/65940800201207150254252991122436108_011.jpg'];
-        var loading = new Loading(aImg);
-
+        var loading = new Loading(null);
+        var foldbox = new Foldbox(null);
         loading.start(function () {
-            $('#main').fadeIn(500, 'linear', function () {
-                alert('ok');
+            //主体页面淡入
+            $('#main').fadeIn(200, 'linear', function () {
+                //联系方式折叠栏初始化
+//                foldbox.init();
+                //招牌进入
+                Brand.start(function () {
+                //菜单进入
+
+                });
             });
         });
 

@@ -99,23 +99,26 @@ body {
 .load_img5 {
     background: url(../images/loading5.png) no-repeat left center;
 }
+
 /*loading end*/
 
 /*main begin*/
 #main {
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 1076px;
     display: none;
-    background:url(../images/main_bg.jpg) no-repeat center top ;
+    background: #413235 url(../images/main_bg.jpg) no-repeat center top;
 }
+
 /*main begin*/
 
 /*foldbox begin*/
 .foldbox {
     top: 0;
-    right:60px;
+    right: 60px;
     position: fixed;
 }
+
 .foldbox_title {
     width: 92px;
     height: 28px;
@@ -126,14 +129,16 @@ body {
     padding-left: 54px;
     background: url(../images/foldbox_bg.png) no-repeat left top;
 }
+
 .foldbox_con li {
     width: 146px;
     height: 30px;
     line-height: 30px;
     text-align: left;
-    margin-bottom:1px;
-    background:#ffffff;
+    margin-bottom: 1px;
+    background: #ffffff;
 }
+
 /*foldbox end*/
 
 /*qr_cond begin*/
@@ -143,9 +148,10 @@ body {
     right: 60px;
     bottom: 100px;
     position: fixed;
-    border: 6px solid  rgba(0, 0, 0, 0.6);
-    background:rgba(0, 0, 0, 0.6) url(../images/qr_code_litte_bg.png) no-repeat left center;
+    border: 6px solid rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.6) url(../images/qr_code_litte_bg.png) no-repeat left center;
 }
+
 .qr_code_big {
     width: 130px;
     height: 130px;
@@ -159,7 +165,81 @@ body {
     -webkit-background-size: cover;
     background-size: cover;
 }
-.qr_code:hover .qr_code_big,.qr_code_big:hover {
+
+.qr_code:hover .qr_code_big, .qr_code_big:hover {
     transform: scale(1);
 }
+
 /*qr_cond end*/
+
+/*content begin*/
+#content {
+    width: 1170px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    border: 1px solid red;
+}
+
+.brand {
+    width: 300px;
+    height: 300px;
+    top: -500px;
+    left: 70px;
+    cursor: pointer;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    position: absolute;
+
+}
+
+.brand_circle {
+    width: 280px;
+    height: 280px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: #ffffff;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    box-shadow: 0 4px 6px #bdbcbc;
+
+}
+
+.brand_address {
+    width: 220px;
+    height: 40px;
+    color: #ec556d;
+    font-size: 28px;
+    top: 130px;
+    left: 30px;
+    position: absolute;
+    font-weight: bolder;
+    padding-bottom: 30px;
+    transition: bacground 1s;
+    background: url(../images/logo.png) no-repeat center 36px;
+    text-align: left;
+}
+
+.brand_address span {
+    margin: 0;
+    height: 26px;
+    display: inline-block; /*FF下必须设置成块否则不能动*/
+    letter-spacing: -6px;
+}
+
+.menu {
+    width: 680px;
+    height: 80px;
+    top: 40px;
+    left: 390px;
+    position: absolute;
+    border: 1px solid red;
+}
+.menu a{
+
+}
+
+
+/*content end*/
