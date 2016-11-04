@@ -1,5 +1,5 @@
 /*loading begin*/
-@keyframes loading2{
+@keyframes loading2 {
     0% {
         transform: rotateZ(0deg);
     }
@@ -7,7 +7,8 @@
         transform: rotateZ(360deg);
     }
 }
-@keyframes loading3{
+
+@keyframes loading3 {
     0% {
         transform: rotateZ(0deg);
     }
@@ -15,21 +16,22 @@
         transform: rotateZ(-360deg);
     }
 }
-/*loading end*/
 
+/*loading end*/
 
 /*波浪效果 begin*/
 @keyframes wave {
-     0% {
-         transform: translateY(14px);
-     }
-     50% {
-         transform: translateY(0);
-     }
-     100% {
-         transform: translateY(14px);
-     }
- }
+    0% {
+        transform: translateY(14px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(14px);
+    }
+}
+
 @-webkit-keyframes wave {
     0% {
         transform: translateY(14px);
@@ -41,7 +43,8 @@
         transform: translateY(14px);
     }
 }
-@-moz-keyframes  wave {
+
+@-moz-keyframes wave {
     0% {
         transform: translateY(14px);
     }
@@ -54,3 +57,30 @@
 }
 
 /*波浪效果 end*/
+
+/*菜单项掉下 begin*/
+/*@keyframes slideInUp {*/
+    /*0% {*/
+        /*transfrom: translateY(-600px);*/
+    /*}*/
+    /*100% {*/
+        /*transfrom: translateY(600px);*/
+    /*}*/
+/*}*/
+/*@-webkit-keyframes slideInUp {*/
+    /*0% {*/
+        /*-webkit-transfrom: translateY(-600px);*/
+    /*}*/
+    /*100% {*/
+        /*-webkit-transfrom: translateY(600px);*/
+    /*}*/
+/*}*/
+/*@-moz-keyframes slideInUp {*/
+    /*0% {*/
+        /*-moz-transfrom: translateY(-600px);*/
+    /*}*/
+    /*100% {*/
+        /*-moz-transfrom: translateY(600px);*/
+    /*}*/
+/*}*/
+/*菜单项掉下 end*/

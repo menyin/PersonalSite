@@ -13,7 +13,7 @@
         <div class="load_img1"></div>
         <div class="load_img2"></div>
         <div class="load_img3"></div>
-        <div class="load_img4">100%</div>
+        <div class="load_img4">1%</div>
         <div class="load_img5"></div>
     </div>
 </div>
@@ -33,7 +33,7 @@
         <div class="qr_code_big"></div>
     </div>
     <section id="content">
-        <header id="header">
+        <header  id="header">
             <div class="brand">
                 <div class="brand_circle">
                 </div>
@@ -51,14 +51,65 @@
                 </h1>
             </div>
             <nav class="menu">
-                <a href="#"><span>首页</span></a>
-                <a href="#"><span>项目</span></a>
-                <a href="#"><span>技能</span></a>
-                <a href="#"><span>履历</span></a>
-                <a href="#"><span>留言</span></a>
+                <a href="#"><span>首页<em>HOME</em></span></a>
+                <a href="#"><span>项目<em>PROJECT</em></span></a>
+                <a href="#"><span>技能<em>SKIL</em></span></a>
+                <a href="#"><span>履历<em>RECORD</em></span></a>
+                <a href="#"><span>留言<em>MESSAGE</em></span></a>
             </nav>
         </header>
         <section id="content_wrap">
+            <div class="magnifier">
+                <ul class="slideimg_box">
+                    <li>
+                       <h2>Web Front-end </h2>
+                    </li>
+                    <li>
+                        <h2>Web Asp.Net</h2>
+                    </li>
+                    <li>
+                        <h2>Web J2EE</h2>
+                    </li>
+                    <li>
+                        <h2>DataBase</h2>
+                    </li>
+                </ul>
+                <div class="magnifier_hander">
+                    <div class="circle">
+                        <h2>Web Front-end</h2>
+                    </div>
+                    <p class="shade"></p>
+                </div>
+                <ul class="slideimg_box">
+                    <li>
+                       <h3> 主攻技能：Web前端开发相关技能</h3>
+                        <p>熟悉JavaScript面向对象编程、Html5&CSS3新特性、主流前端框架开发</p>
+                    </li>
+                    <li>
+                        <h3> 附加技能：.Net后端开发相关技能</h3>
+                        <p>熟悉Asp.net MVC&Webform、EntityFramework原理及应用</p>
+                    </li>
+                    <li>
+                        <h3> 附加技能：Java后端开发相关技能</h3>
+                        <p>了解J2EE开发基础知识及开发环境</p>
+                    </li>
+                    <li>
+                        <h3> 附加技能：数据库及设计相关技能</h3>
+                        <p>熟悉SqlServer、PowerDesigner，了解oracle</p>
+                    </li>
+                </ul>
+                <div>
+                    <p>一专多能-你值得拥有</p>
+                </div>
+                <ul>
+                    <li>
+                        <span>。</span>
+                        <span>。</span>
+                        <span>。</span>
+                    </li>
+                </ul>
+
+            </div>
         </section>
         <footer id="footer">
             页脚
@@ -71,8 +122,8 @@
 <script src="js/jquery-animte-extend.js"></script>
 <script src="js/sea.js"></script>
 <script>
-    var importModule = ['./js/Global', './js/Loading', './js/Foldbox', './js/Brand'];
-    seajs.use(importModule, function (Global, Loading, Foldbox, Brand) {
+    var importModule = ['./js/Global', './js/Loading', './js/Foldbox', './js/Brand', './js/Menu'];
+    seajs.use(importModule, function (Global, Loading, Foldbox, Brand, Menu) {
         //全局的一些配置
         Global.init();
 
@@ -80,6 +131,7 @@
         //预加载图片列表
         var loading = new Loading(null);
         var foldbox = new Foldbox(null);
+        var menu = new Menu();
         loading.start(function () {
             //主体页面淡入
             $('#main').fadeIn(200, 'linear', function () {
@@ -87,7 +139,13 @@
 //                foldbox.init();
                 //招牌进入
                 Brand.start(function () {
-                //菜单进入
+                    //菜单进入
+                    menu.start(function () {
+                        alert('回调');
+                    });
+                    //3D转盘进入
+
+                    //放大镜进入
 
                 });
             });
