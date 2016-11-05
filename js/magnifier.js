@@ -7,14 +7,22 @@ define(function (require, exports, module) {
     var MagnifierHander = require('./MagnifierHander');
     module.exports = Magnifier;
     function Magnifier() {
+        this.magnifier = $('.magnifier');
         this.init();
         console.log('init');
     }
+    Magnifier.prototype.start=function(endCallback) {
+        this.magnifier.animate({'top':210,'opacity':1},800,'swing', function () {
+            if (endCallback) {
+                endCallback();
+            }
+        });
+    };
     Magnifier.prototype.init=function () {
         var a$Li1 = $('.slideimg_box_one li');
-        var slideImg1=new SlideImg(a$Li1,[{top:0,left:0,opacity:1},{top:0,left:460,opacity:0},{top:-120,left:460,opacity:0},{top:-120,left:0,opacity:0}],200);
+        var slideImg1=new SlideImg(a$Li1,[{top:0,left:0,opacity:1,active:true},{top:0,left:460,opacity:0},{top:-120,left:460,opacity:0},{top:-120,left:0,opacity:0}],200);
         var a$Li2 = $('.slideimg_box_two li');
-        var slideImg2=new SlideImg(a$Li2,[{top:0,left:0,opacity:1},{top:58,left:0,opacity:0},{top:58,left:460,opacity:0},{top:0,left:460,opacity:0}],20);
+        var slideImg2=new SlideImg(a$Li2,[{top:0,left:0,opacity:1,active:true},{top:58,left:0,opacity:0},{top:58,left:460,opacity:0},{top:0,left:460,opacity:0}],20);
         var magnifierHander = new MagnifierHander();
         //前进后退按钮事件
         $('.lightbox_bt1').mousedown(function () {

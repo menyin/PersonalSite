@@ -24,8 +24,13 @@ SlideImg.prototype.next = function (endCallback) {
 
 SlideImg.prototype.gotoImg = function (endCallback) {
     var _this=this;
-    this.a$Li.each(function (i) {
+    _this.a$Li.each(function (i) {
         $(this).animate(_this.aProperty[i],1000,'easeOut', function () {
+            //为当前项li指定class
+            if (_this.aProperty[i].active) {
+                _this.a$Li.removeClass('active').eq(i).addClass('active');
+            }
+            //样式重置后执行回调
             if (_this.a$Li.size()-1==i&&endCallback) {
                 endCallback();
             }

@@ -60,25 +60,27 @@
         </header>
         <section id="content_wrap">
             <div class="magnifier">
-                <ul class="slideimg_box_one">
-                    <li>
-                        Web Front-end
-                    </li>
-                    <li>
-                        Web Asp.Net
-                    </li>
-                    <li>
-                        Web J2EE
-                    </li>
-                    <li>
-                        DataBase
-                    </li>
-                </ul>
-                <div class="magnifier_hander">
-                    <div class="circle">
-                        <h2>Web Front-end</h2>
+                <div class="zoom">
+                    <ul class="slideimg_box_one">
+                        <li>
+                            Web Front-end
+                        </li>
+                        <li>
+                            Web Asp.Net
+                        </li>
+                        <li>
+                            Web J2EE
+                        </li>
+                        <li>
+                            DataBase
+                        </li>
+                    </ul>
+                    <div class="magnifier_hander">
+                        <div class="circle">
+                            <h2>Web Front-end</h2>
 
-                        <p class="shade"></p>
+                            <p class="shade"></p>
+                        </div>
                     </div>
                 </div>
                 <ul class="slideimg_box_two">
@@ -100,7 +102,6 @@
                     <p>熟悉SqlServer、PowerDesigner，了解oracle</p>
                     </li>
                 </ul>
-
                 <div class="lightbox_wrap">
                     <div class="lightbox">
                         <div class="lightbox_shade"></div>
@@ -148,6 +149,10 @@
                     //3D转盘进入
 
                     //放大镜进入
+                    setTimeout(function () {
+                        magnifier.start();
+                    }, 2000);
+
 
                 });
             });

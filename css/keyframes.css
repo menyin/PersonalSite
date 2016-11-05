@@ -84,3 +84,15 @@
     /*}*/
 /*}*/
 /*菜单项掉下 end*/
+
+@keyframes lightbox_shade {
+    0%{
+        left:-300px;
+    }
+    50%{
+        left:300px;
+    }
+    100%{
+        left:-300px;
+    }
+}
