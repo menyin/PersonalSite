@@ -33,7 +33,7 @@
         <div class="qr_code_big"></div>
     </div>
     <section id="content">
-        <header  id="header">
+        <header id="header">
             <div class="brand">
                 <div class="brand_circle">
                 </div>
@@ -62,47 +62,54 @@
             <div class="magnifier">
                 <ul class="slideimg_box_one">
                     <li>
-                       Web Front-end
+                        Web Front-end
                     </li>
                     <li>
-                       Web Asp.Net
+                        Web Asp.Net
                     </li>
                     <li>
-                       Web J2EE
+                        Web J2EE
                     </li>
                     <li>
-                      DataBase
+                        DataBase
                     </li>
                 </ul>
                 <div class="magnifier_hander">
                     <div class="circle">
                         <h2>Web Front-end</h2>
+
                         <p class="shade"></p>
                     </div>
-
                 </div>
                 <ul class="slideimg_box_two">
                     <li>
-                       <h3> 主攻技能：Web前端开发相关技能</h3>
-                        <p>熟悉JavaScript面向对象编程、Html5&CSS3新特性、主流前端框架开发</p>
+                        <h3> 主攻技能：Web前端开发相关技能</h3>
+
+                        <p>熟悉JavaScript面向对象、Html5&CSS3新特性、主流前端框架</p>
                     </li>
                     <li>
-                        <h3> 附加技能：.Net后端开发相关技能</h3>
-                        <p>熟悉Asp.net MVC&Webform、EntityFramework原理及应用</p>
+                    <h3> 附加技能：.Net后端开发相关技能</h3>
+                    <p>熟悉Asp.net MVC&Webform、EntityFramework原理及应用</p>
                     </li>
                     <li>
-                        <h3> 附加技能：Java后端开发相关技能</h3>
-                        <p>了解J2EE开发基础知识及开发环境</p>
+                    <h3> 附加技能：Java后端开发相关技能</h3>
+                    <p>了解J2EE开发基础知识及开发环境</p>
                     </li>
                     <li>
-                        <h3> 附加技能：数据库及设计相关技能</h3>
-                        <p>熟悉SqlServer、PowerDesigner，了解oracle</p>
+                    <h3> 附加技能：数据库及设计相关技能</h3>
+                    <p>熟悉SqlServer、PowerDesigner，了解oracle</p>
                     </li>
                 </ul>
-                <div>
-                    <p>一专多能-你值得拥有</p>
+
+                <div class="lightbox_wrap">
+                    <div class="lightbox">
+                        <div class="lightbox_shade"></div>
+                        <p>我一专多能-你值得拥有</p>
+                    </div>
+                    <a href="javascript:;" class="lightbox_bt1"></a>
+                    <a href="javascript:;" class="lightbox_bt2"></a>
                 </div>
-                <p><a class="slideimg_prevent" href="javascript:;"></a><a class="slideimg_next" href="javascript:;"></a></p>
+
             </div>
         </section>
         <footer id="footer">
@@ -116,8 +123,8 @@
 <script src="js/jquery-animte-extend.js"></script>
 <script src="js/sea.js"></script>
 <script>
-    var importModule = ['./js/Global', './js/Loading', './js/Foldbox', './js/Brand', './js/Menu'];
-    seajs.use(importModule, function (Global, Loading, Foldbox, Brand, Menu) {
+    var importModule = ['./js/Global', './js/Loading', './js/Foldbox', './js/Brand', './js/Menu', './js/Magnifier'];
+    seajs.use(importModule, function (Global, Loading, Foldbox, Brand, Menu,Magnifier) {
         //全局的一些配置
         Global.init();
 
@@ -125,6 +132,7 @@
         //预加载图片列表
         var loading = new Loading(null);
         var foldbox = new Foldbox(null);
+        var magnifier=new Magnifier();
         var menu = new Menu();
         loading.start(function () {
             //主体页面淡入
