@@ -148,7 +148,7 @@
             <div class="blogs">
                 <div class="blogs_wrap">
                     <h2 class="blogs_title">技术博客<span>BLOGS</span></h2>
-                    <ul class="wirefont">
+                    <ul class="wirefont" id="wirefont">
                         <li><em>2016-10-11</em><a href="">前端开发三大JavaScript框架对比之我见</a></li>
                         <li><em>2016-10-11</em><a href="">前端开发三大JavaScript框架对比之我见</a></li>
                         <li><em>2016-10-11</em><a href="">前端开发三大JavaScript框架对比之我见</a></li>
@@ -156,9 +156,11 @@
                         <li><em>2016-10-11</em><a href="">前端开发三大JavaScript框架对比之我见</a></li>
                         <li><em>2016-10-11</em><a href="">前端开发三大JavaScript框架对比之我见</a></li>
                     </ul>
-                    <p class="blogs_more">
-                        more...
-                    </p>
+                    <div class="blogs_more">
+                        <p>
+                            more...
+                        </p>
+                    </div>
                 </div>
 
             </div>
@@ -174,8 +176,9 @@
 <script src="js/jquery-animte-extend.js"></script>
 <script src="js/sea.js"></script>
 <script>
-    var importModule = ['./js/Global', './js/Loading', './js/Foldbox', './js/Brand', './js/Menu', './js/Magnifier', './js/Scene3d'];
-    seajs.use(importModule, function (Global, Loading, Foldbox, Brand, Menu, Magnifier, Scene3d) {
+    var importModule = ['./js/Global', './js/Loading', './js/Foldbox',
+        './js/Brand', './js/Menu', './js/Magnifier', './js/Scene3d', './js/Wirefont'];
+    seajs.use(importModule, function (Global, Loading, Foldbox, Brand, Menu, Magnifier, Scene3d,Wirefont) {
         //全局的一些配置
         Global.init();
 
@@ -186,6 +189,7 @@
         var magnifier = new Magnifier();
         var menu = new Menu();
         var scene3d = new Scene3d();
+        var wirefont=new Wirefont();
         loading.start(function () {
             //主体页面淡入
             $('#main').fadeIn(200, 'linear', function () {
