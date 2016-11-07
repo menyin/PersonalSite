@@ -2,14 +2,12 @@
  * Created by CNY on 2016/11/4.
  */
 define(function (require, exports, module) {
-    console.log('1111');
     var SlideImg = require('./SlideImg');
     var MagnifierHander = require('./MagnifierHander');
     module.exports = Magnifier;
     function Magnifier() {
         this.magnifier = $('.magnifier');
         this.init();
-        console.log('init');
     }
     Magnifier.prototype.start=function(endCallback) {
         this.magnifier.animate({'top':210,'opacity':1},800,'swing', function () {

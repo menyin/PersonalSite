@@ -85,6 +85,7 @@
 /*}*/
 /*菜单项掉下 end*/
 
+/*放大镜模块打开 begin*/
 @keyframes lightbox_shade {
     0%{
         left:-300px;
@@ -96,3 +97,44 @@
         left:-300px;
     }
 }
+/*放大镜模块打开 end*/
+
+/*卷帘打开 begin*/
+@keyframes foldopen {
+    0% {
+        transform: rotateX(-180deg);
+    }
+    40% {
+        transform: rotateX(30deg);
+    }
+    70% {
+        transform: rotateX(-20deg);
+    }
+    90% {
+        transform: rotateX(10deg);
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
+
+}
+@-webkit-keyframes foldopen{
+    0% {
+        transform: rotateX(-180deg);
+    }
+    40% {
+        transform: rotateX(30deg);
+    }
+    70% {
+        transform: rotateX(-20deg);
+    }
+    90% {
+        transform: rotateX(10deg);
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
+
+}
+/*卷帘打开 end*/
+

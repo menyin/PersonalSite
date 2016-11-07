@@ -22,17 +22,34 @@
     <!--联系列表-->
     <div id="foldbox" class="foldbox">
         <h4 class="foldbox_title">联系方式</h4>
-        <ul class="foldbox_con">
-            <li>Tel：13960392037</li>
-            <li>QQ：845257580</li>
-            <li>WeChat：gudulvren000</li>
-            <li>Email：gulvren@qq.com</li>
-        </ul>
+
+        <div class="foldbox_con">
+            <span>Tel：13960392037</span>
+
+            <div>
+                <span>Tel：13960392037</span>
+
+                <div>
+                    <span>QQ：845257580</span>
+
+                    <div>
+                        <span>WeChat：gudulvren000</span>
+
+                        <div>
+                            <span>Email:gulvren@qq.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
+    <!--二维码-->
     <div class="qr_code">
         <div class="qr_code_big"></div>
     </div>
     <section id="content">
+        <!--头部-->
         <header id="header">
             <div class="brand">
                 <div class="brand_circle">
@@ -59,6 +76,7 @@
             </nav>
         </header>
         <section id="content_wrap">
+            <!--放大镜模块-->
             <div class="magnifier">
                 <div class="zoom">
                     <ul class="slideimg_box_one">
@@ -90,16 +108,19 @@
                         <p>熟悉JavaScript面向对象、Html5&CSS3新特性、主流前端框架</p>
                     </li>
                     <li>
-                    <h3> 附加技能：.Net后端开发相关技能</h3>
-                    <p>熟悉Asp.net MVC&Webform、EntityFramework原理及应用</p>
+                        <h3> 附加技能：.Net后端开发相关技能</h3>
+
+                        <p>熟悉Asp.net MVC&Webform、EntityFramework原理及应用</p>
                     </li>
                     <li>
-                    <h3> 附加技能：Java后端开发相关技能</h3>
-                    <p>了解J2EE开发基础知识及开发环境</p>
+                        <h3> 附加技能：Java后端开发相关技能</h3>
+
+                        <p>了解J2EE开发基础知识及开发环境</p>
                     </li>
                     <li>
-                    <h3> 附加技能：数据库及设计相关技能</h3>
-                    <p>熟悉SqlServer、PowerDesigner，了解oracle</p>
+                        <h3> 附加技能：数据库及设计相关技能</h3>
+
+                        <p>熟悉SqlServer、PowerDesigner，了解oracle</p>
                     </li>
                 </ul>
                 <div class="lightbox_wrap">
@@ -111,6 +132,23 @@
                     <a href="javascript:;" class="lightbox_bt2"></a>
                 </div>
 
+            </div>
+            <!--3d场景-->
+            <div class="scene3d">
+                <div class="icon"></div>
+                <div class="ie"></div>
+                <div class="circle"></div>
+                <div class="peple"></div>
+                <div class="h5"></div>
+                <div class="ff"></div>
+                <div class="safari"></div>
+                <div class="chorme"></div>
+            </div>
+            <!--琴弦文字-->
+            <div class="blogs">
+                <h2 class="blogs_title"><span>技术博客</span>BLOGS</h2>
+                <div class="wirefont">
+                </div>
             </div>
         </section>
         <footer id="footer">
@@ -124,8 +162,8 @@
 <script src="js/jquery-animte-extend.js"></script>
 <script src="js/sea.js"></script>
 <script>
-    var importModule = ['./js/Global', './js/Loading', './js/Foldbox', './js/Brand', './js/Menu', './js/Magnifier'];
-    seajs.use(importModule, function (Global, Loading, Foldbox, Brand, Menu,Magnifier) {
+    var importModule = ['./js/Global', './js/Loading', './js/Foldbox', './js/Brand', './js/Menu', './js/Magnifier', './js/Scene3d'];
+    seajs.use(importModule, function (Global, Loading, Foldbox, Brand, Menu, Magnifier, Scene3d) {
         //全局的一些配置
         Global.init();
 
@@ -133,8 +171,9 @@
         //预加载图片列表
         var loading = new Loading(null);
         var foldbox = new Foldbox(null);
-        var magnifier=new Magnifier();
+        var magnifier = new Magnifier();
         var menu = new Menu();
+        var scene3d = new Scene3d();
         loading.start(function () {
             //主体页面淡入
             $('#main').fadeIn(200, 'linear', function () {
@@ -147,7 +186,9 @@
                         alert('回调');
                     });
                     //3D转盘进入
-
+                    setTimeout(function () {
+                        scene3d.start();
+                    }, 1000);
                     //放大镜进入
                     setTimeout(function () {
                         magnifier.start();

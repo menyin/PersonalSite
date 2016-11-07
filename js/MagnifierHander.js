@@ -19,7 +19,6 @@ define(function (require, exports, module) {
             var iScale=66/50;
             if (iX>zoom.offset().left&&iX<zoom.offset().left+zoom.width()) {
                 $('.magnifier_hander').stop().animate({'left':iX-98},10,'swing');
-                document.title=-(iX - 60) * iScale;
                 oXoomFont.animate({'left':-(iX - 60) * iScale},10,'swing');
             }
         });
