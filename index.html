@@ -76,6 +76,7 @@
             </nav>
         </header>
         <section id="content_wrap">
+            <!------------------------------------------------------------首页 begin------------------------------------------------------------>
             <!--放大镜模块-->
             <div class="magnifier">
                 <div class="zoom">
@@ -144,10 +145,11 @@
                 <div class="safari"></div>
                 <div class="chorme"></div>
             </div>
-            <!--琴弦文字-->
+            <!--技术博客-->
             <div class="blogs">
                 <div class="blogs_wrap">
                     <h2 class="blogs_title">技术博客<span>BLOGS</span></h2>
+                    <!--琴弦文字-->
                     <ul class="wirefont" id="wirefont">
                         <li><em>2016-10-11</em><a href="">前端开发三大JavaScript框架对比之我见</a></li>
                         <li><em>2016-10-11</em><a href="">前端开发三大JavaScript框架对比之我见</a></li>
@@ -164,6 +166,32 @@
                 </div>
 
             </div>
+            <!--项目作品-->
+            <div class="projects">
+                <div class="bt_prevent"></div>
+                <div class="bt_next"></div>
+                <ul class="slideimg_box_three">
+                    <li>
+                        <a href="#"><img src="images/project1.png" alt=""/></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/project1.png" alt=""/></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/project1.png" alt=""/></a>
+                    </li>
+                </ul>
+                <a class="projects_title" href="#"><img src="images/projects_title.png" alt=""/></a>
+            </div>
+            <!--提示块-->
+            <div class="tip">
+            </div>
+            <!------------------------------------------------------------首页 end------------------------------------------------------------>
+
+            <!------------------------------------------------------------项目页 begin------------------------------------------------------------>
+
+            <!------------------------------------------------------------项目页 end------------------------------------------------------------>
+
         </section>
         <footer id="footer">
             页脚
@@ -176,9 +204,9 @@
 <script src="js/jquery-animte-extend.js"></script>
 <script src="js/sea.js"></script>
 <script>
-    var importModule = ['./js/Global', './js/Loading', './js/Foldbox',
-        './js/Brand', './js/Menu', './js/Magnifier', './js/Scene3d', './js/Wirefont'];
-    seajs.use(importModule, function (Global, Loading, Foldbox, Brand, Menu, Magnifier, Scene3d,Wirefont) {
+    var importModule = ['./js/Global', './js/Loading', './js/Foldbox', './js/Brand',
+        './js/Menu', './js/Magnifier', './js/Scene3d', './js/Wirefont', './js/Projects'];
+    seajs.use(importModule, function (Global, Loading, Foldbox, Brand, Menu, Magnifier, Scene3d, Wirefont, Projects) {
         //全局的一些配置
         Global.init();
 
@@ -189,7 +217,8 @@
         var magnifier = new Magnifier();
         var menu = new Menu();
         var scene3d = new Scene3d();
-        var wirefont=new Wirefont();
+        var wirefont = new Wirefont();
+        var projects = new Projects();
         loading.start(function () {
             //主体页面淡入
             $('#main').fadeIn(200, 'linear', function () {
@@ -201,16 +230,22 @@
                     menu.start(function () {
                         alert('回调');
                     });
-                    //3D转盘进入
                     setTimeout(function () {
+                        //3D转盘进入
                         scene3d.start();
+                        //作品项目轮播图进入
+                        projects.start();
+
                     }, 1000);
-                    //放大镜进入
                     setTimeout(function () {
+                        //放大镜进入
                         magnifier.start();
+                        //技术博客琴弦文字进入
+                        wirefont.start();
                     }, 2000);
-
-
+                    setTimeout(function () {
+                        $('.tip').animate({'bottom':94,'opacity':1},800,'swing');
+                    }, 3000);
                 });
             });
         });

@@ -153,6 +153,8 @@ body {
     transform: rotateX(-180deg);
     backface-visibility: hidden;
     border-bottom: 2px solid #f6e4e0;
+    box-shadow:0 0 2px #d1b0a7;
+
 }
 
 div.foldbox_con {
@@ -164,6 +166,7 @@ div.foldbox_con {
     animation: foldopen 1s ease forwards;
     -webkit-animation: foldopen 1s ease forwards;
     tranform: rotate(0deg);
+    box-shadow:none;
 }
 
 .foldbox div span {
@@ -236,6 +239,7 @@ div.foldbox_con {
     height: 100%;
     margin: -40px auto 0;
     position: relative;
+    overflow:hidden;
     border: 1px solid red;
 }
 
@@ -645,7 +649,7 @@ div.foldbox_con {
     width: 600px;
     height: 284px;
     left: 200px;
-    bottom: 94px;
+    bottom: -500px;
     position: absolute;
     background: url(../images/blogs_bg.png) no-repeat left center;
 }
@@ -713,7 +717,6 @@ div.foldbox_con {
     height:12px;
     line-height: 16px;
     position:relative;
-    background:yellow;
 }
 .blogs_more {
     width:82px;
@@ -723,6 +726,8 @@ div.foldbox_con {
     -ms-transform-style: preserve-3d;
     transform-style: preserve-3d;
     perspective: 300px;
+    z-index: 6;
+
 }
 .blogs_more p {
     width: 82px;
@@ -738,6 +743,98 @@ div.foldbox_con {
 
 .blogs_more:hover p{
     transform: rotateY(-40deg);
+}
+.projects {
+    width: 600px;
+    height: 320px;
+    opacity:0;
+    left:40px;
+    bottom: -500px;
+    position:absolute;
+    z-index:5;
+}
+.slideimg_box_three {
+    width: 430px;
+    height: 320px;
+    overflow: hidden;
+    position: relative;
 
+}
+.slideimg_box_three li {
+    width: 280px;
+    height: 310px;
+    position:absolute;
+    transform-style:preserve-3d;
+}
+.bt_prevent {
+    width: 18px;
+    height: 30px;
+    left: 130px;
+    top:calc(50% - 28px);
+    z-index: 5;
+    display: none;
+    position: absolute;
+    background: url(../images/bt_prevent.png) no-repeat left center;
+}
+
+.bt_next {
+    width: 18px;
+    height: 30px;
+    left: 310px;
+    top:calc(50% - 28px);
+    z-index: 5;
+    display: none;
+    position: absolute;
+    background: url(../images/bt_next.png) no-repeat left center;
+}
+.projects:hover .bt_prevent,.projects:hover .bt_next {
+   display: block;
+}
+/*.slideimg_box_three li:nth-of-type(1) {*/
+    /*top: 0;*/
+    /*left:75px;*/
+    /*z-index: 3;*/
+    /*opacity:1;*/
+    /*/!*filter: blur(0px);*!/*/
+    /*/!*-webkit-filter: blur(0px);*!/*/
+    /*transform: scale(1) translateZ(0px);*/
+    /*-webkit-transform: scale(1) translateZ(-0px);*/
+/*}*/
+/*.slideimg_box_three li:nth-of-type(2) {*/
+    /*top: 0;*/
+    /*left:-25px;*/
+    /*z-index: 2;*/
+    /*opacity:0.7;*/
+    /*/!*filter: blur(10px);*!/*/
+    /*/!*-webkit-filter: blur(10px);*!/*/
+    /*transform: scale(0.8) translateZ(-30000px);*/
+    /*-webkit-transform:  scale(0.8) translateZ(-30000px);*/
+/*}*/
+/*.slideimg_box_three li:nth-of-type(3) {*/
+    /*top:0;*/
+    /*left:175px;*/
+    /*z-index: 2;*/
+    /*opacity:0.7;*/
+    /*/!*filter: blur(10px);*!/*/
+    /*/!*-webkit-filter: blur(10px);*!/*/
+    /*transform:scale(0.8) translateZ(-30000px);*/
+    /*-webkit-transform:scale(0.8) translateZ(-30000px);*/
+/*}*/
+.projects_title {
+    width:172px;
+    height: 76px;
+    bottom:-24px;
+    right:140px;
+    position:absolute;
+    z-index:4;
+}
+
+.tip {
+    width: 324px;
+    height: 298px;
+    left: 840px;
+    bottom: -500px;
+    position: absolute;
+    background: url(../images/tip_bg.png) no-repeat left center;
 }
 /*content end*/

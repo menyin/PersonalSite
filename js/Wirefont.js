@@ -5,6 +5,7 @@ define(function (require, exports, module) {
     module.exports = Wirefont;
     function Wirefont() {
         this.init();
+        this.blogs = $('.blogs');
     }
 
     Wirefont.prototype.init = function () {
@@ -46,26 +47,17 @@ define(function (require, exports, module) {
                         var iTop = parseInt($(this).css('top')) + iDisY;
                         $(this).css('top', iTop);
                         var iNowIndex = $(this).index();
-                        if (iDisY > 30) {
+                        if (iDisY > 20) {//20为琴弦拉动Y轴最大幅度
                             aSpan.each(function () {
                                 $(this).animate({'top': this.startTop}, 1000, 'elasticOut');
                             });
                         } else {
-                            console.log(aSpan);
-                            var iddd=0
                             aSpan.each(function (i) {
-                                //document.title = iDisY + '-' + iNowIndex + '-' + i;
-                                //if (iDisY - Math.abs(iNowIndex - i) > 0) {
-                                    document,title=3333;
+                                if (iDisY - Math.abs(iNowIndex - i) > 0) {
                                     var iCurrDisY = iDirec * (iDisY - Math.abs(iNowIndex - $(this).index()));
-                                    document, title = 444;
-                                    $(this).css({'top': this.startTop + this.iCurrDisY});
-                                    document, title = 555;
-
-                                //}
-
+                                    aSpan.eq(i).css({top: this.startTop + iCurrDisY});
+                                }
                             });
-                            $(this).css({'top': this.startTop + this.iCurrDisY});
                         }
                     });
                     $(this).mouseout(function () {
@@ -78,5 +70,13 @@ define(function (require, exports, module) {
             });
         }, 1000);
 
+    };
+
+    Wirefont.prototype.start= function (endCallback) {
+        this.blogs.animate({'bottom':94,'opacity':1},800,'swing', function () {
+            if (endCallback) {
+                endCallback();
+            }
+        });
     };
 });
