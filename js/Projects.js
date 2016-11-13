@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Created by CNY on 2016/11/8.
  */
 define(function (require, exports, module) {
@@ -47,6 +47,20 @@ define(function (require, exports, module) {
 
     Projects.prototype.start= function (endCallback) {
         this.projects.animate({'bottom':94,'opacity':1},800,'swing', function () {
+            if (endCallback) {
+                endCallback();
+            }
+        });
+    };
+    Projects.prototype.out= function (endCallback) {
+        this.projects.animate({'bottom':-500,'opacity':0},200,'swing', function () {
+            if (endCallback) {
+                endCallback();
+            }
+        });
+    };
+    Projects.prototype.out= function (endCallback) {
+        this.projects.animate({'bottom':-500,'opacity':0},200,'swing', function () {
             if (endCallback) {
                 endCallback();
             }

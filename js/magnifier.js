@@ -5,12 +5,23 @@ define(function (require, exports, module) {
     var SlideImg = require('./SlideImg');
     var MagnifierHander = require('./MagnifierHander');
     module.exports = Magnifier;
-    function Magnifier() {
+    function Magnifier(endCallback) {
         this.magnifier = $('.magnifier');
         this.init();
+        if (endCallback) {
+            endCallback();
+        }
     }
     Magnifier.prototype.start=function(endCallback) {
-        this.magnifier.animate({'top':210,'opacity':1},800,'swing', function () {
+        this.magnifier.css('top',100).animate({'top':210,'opacity':1},800,'swing', function () {
+            if (endCallback) {
+                endCallback();
+            }
+        });
+    };
+    Magnifier.prototype.out=function(endCallback) {
+        this.magnifier.animate({'top':100,'opacity':0},200,'swing', function () {
+            $(this).css('top', -400);
             if (endCallback) {
                 endCallback();
             }

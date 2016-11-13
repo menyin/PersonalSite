@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -68,14 +68,14 @@
                 </h1>
             </div>
             <nav class="menu">
-                <a href="#"><span>首页<em>HOME</em></span></a>
-                <a href="#"><span>项目<em>PROJECT</em></span></a>
-                <a href="#"><span>技能<em>SKIL</em></span></a>
-                <a href="#"><span>履历<em>RECORD</em></span></a>
-                <a href="#"><span>留言<em>MESSAGE</em></span></a>
+                <a href="#index"><span>首页<em>HOME</em></span></a>
+                <a href="#project"><span>项目<em>PROJECT</em></span></a>
+                <a href="#skill"><span>技能<em>SKIL</em></span></a>
+                <a href="#record"><span>履历<em>RECORD</em></span></a>
+                <a href="#message"><span>留言<em>MESSAGE</em></span></a>
             </nav>
         </header>
-        <section id="content_wrap">
+        <section id="index">
             <!------------------------------------------------------------首页 begin------------------------------------------------------------>
             <!--放大镜模块-->
             <div class="magnifier">
@@ -193,6 +193,24 @@
             <!------------------------------------------------------------项目页 end------------------------------------------------------------>
 
         </section>
+        <section id="project">
+            <div class="test_project" id="ddddd"></div>
+        </section>
+        <section id="skill">
+            <div class="cloud3d">
+                <ul class="ball" id="ball"></ul>
+                <ul class="cone" id="cone"></ul>
+                <ul class="cylinder" id="cylinder">
+                </ul>
+                <ul class="bts">
+                    <li class="bt1"><p>前端</p></li>
+                    <li class="bt2"><p>后台</p></li>
+                    <li class="bt3"><p>数据库</p></li>
+                </ul>
+            </div>
+        </section>
+        <section id="record"></section>
+        <section id="message"></section>
         <footer id="footer">
             页脚
         </footer>
@@ -205,20 +223,15 @@
 <script src="js/sea.js"></script>
 <script>
     var importModule = ['./js/Global', './js/Loading', './js/Foldbox', './js/Brand',
-        './js/Menu', './js/Magnifier', './js/Scene3d', './js/Wirefont', './js/Projects'];
-    seajs.use(importModule, function (Global, Loading, Foldbox, Brand, Menu, Magnifier, Scene3d, Wirefont, Projects) {
-        //全局的一些配置
+        './js/Menu', './js/Index', './js/Project', './js/Skill'];
+    seajs.use(importModule, function (Global, Loading, Foldbox, Brand, Menu, Index, Project,Skill) {
+        /*全局的一些配置*/
         Global.init();
-
         /*加载动画*/
-        //预加载图片列表
         var loading = new Loading(null);
         var foldbox = new Foldbox(null);
-        var magnifier = new Magnifier();
-        var menu = new Menu();
-        var scene3d = new Scene3d();
-        var wirefont = new Wirefont();
-        var projects = new Projects();
+        var menu = new Menu(null);
+        var sOldHash = window.location.hash.substring(1) || 'index';
         loading.start(function () {
             //主体页面淡入
             $('#main').fadeIn(200, 'linear', function () {
@@ -227,28 +240,68 @@
                 //招牌进入
                 Brand.start(function () {
                     //菜单进入
-                    menu.start(function () {
-                        alert('回调');
-                    });
-                    setTimeout(function () {
-                        //3D转盘进入
-                        scene3d.start();
-                        //作品项目轮播图进入
-                        projects.start();
-
-                    }, 1000);
-                    setTimeout(function () {
-                        //放大镜进入
-                        magnifier.start();
-                        //技术博客琴弦文字进入
-                        wirefont.start();
-                    }, 2000);
-                    setTimeout(function () {
-                        $('.tip').animate({'bottom':94,'opacity':1},800,'swing');
-                    }, 3000);
+                    menu.start();
+                    newPageIn(sOldHash);
                 });
             });
         });
 
+        /*注册hashchange事件*/
+        $(window).on('hashchange', function () {
+            var sNewHash = window.location.hash.substring(1) || 'index';
+            if (sNewHash != sOldHash) {
+                oldPageOut(sOldHash, function () {
+                    newPageIn(sNewHash, function () {
+                        sOldHash = sNewHash;
+                    });
+                });
+            }
+        });
+
+        function newPageIn(sNewHash, endCallback) {
+            switch (sNewHash) {
+                case 'index':
+                    Index.in();
+                    break;
+                case 'project':
+                    Project.in();
+                    break;
+              case 'skill':
+                    Skill.in();
+                    break;
+//                case 'Record':
+//                    Index.in();
+//                    break;
+//                case 'Message':
+//                    Index.in();
+//                    break;
+            }
+            if (endCallback) {
+                endCallback();
+            }
+        }
+
+        function oldPageOut(sOldHash, endCallback) {
+            switch (sOldHash) {
+                case 'index':
+                    Index.out();
+                    break;
+//                case 'project':
+//                    Project.out();
+//                    break;
+//                case 'Skill':
+//                    Index.out();
+//                    break;
+//                case 'Record':
+//                    Index.out();
+//                    break;
+//                case 'Message':
+//                    Index.out();
+//                    break;
+            }
+            if (endCallback) {
+                endCallback();
+            }
+        }
     });
 </script>

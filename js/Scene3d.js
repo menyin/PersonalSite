@@ -20,11 +20,18 @@ define(function (require, exports, module) {
         });
     };
     Scene3d.prototype.start= function (endCallback) {
-        this.scene3d.animate({'top':150,'opacity':1},800,'swing', function () {
+        this.scene3d.css('top',60).animate({'top':150,'opacity':1},800,'swing', function () {
             if (endCallback) {
                 endCallback();
             }
         });
     };
-
+    Scene3d.prototype.out= function (endCallback) {
+        this.scene3d.animate({'top':60,'opacity':0},200,'swing', function () {
+            $(this).css('top', -460);
+            if (endCallback) {
+                endCallback();
+            }
+        });
+    };
 });

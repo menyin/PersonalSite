@@ -79,4 +79,11 @@ define(function (require, exports, module) {
             }
         });
     };
+    Wirefont.prototype.out= function (endCallback) {
+        this.blogs.animate({'bottom':-500,'opacity':0},200,'swing', function () {
+            if (endCallback) {
+                endCallback();
+            }
+        });
+    };
 });

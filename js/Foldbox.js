@@ -19,8 +19,6 @@ define(function (require, exports, module) {
                     clearInterval(oTimer);
                 }
                 aDiv.eq(iNow).addClass('foldopen');
-                console.log(iNow);
-                console.log( aDiv.eq(iNow));
                 iNow++;
             },100);
             _this.foldbox.height(aDiv.last().offset().top+32);//解决卷帘一下来就上去问题
