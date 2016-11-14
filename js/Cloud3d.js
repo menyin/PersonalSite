@@ -106,6 +106,7 @@ define(function (require, exports, module) {
             aLi[i].style.webkitTransform = aLi[i].minTransform;
             aLi[i].style.opacity = 1;
         }
+        this.state = 'in';//记录图形所处状态
     };
     Ball.prototype.out = function () {
         var aLi =  this.oUl.getElementsByTagName('li');
@@ -114,12 +115,23 @@ define(function (require, exports, module) {
             aLi[i].style.webkitTransform = aLi[i].maxTransform;
             aLi[i].style.opacity = 0;
         }
+        this.state = 'out';//记录图形所处状态
+    };
+    Ball.prototype.rotateStart = function () {
+        var iNow=0;
+        var _this=this;
+        this.oUl.timer=setInterval(function () {
+            _this.oUl.style.transform = 'rotateX(' +(iNow+2) + 'deg)'+'rotateY(' + iNow + 'deg)'+'rotateZ(' + (iNow+1) + 'deg)';
+            iNow++;
+        },100);
+    };
+    Ball.prototype.rotateStop = function () {
+        clearInterval(this.oUl.timer);
     };
     //圆锥
     function Cone(oUl, sTxt) {
         this.init(oUl, sTxt);
     }
-
     Cone.prototype.init = function (oUl, sTxt) {
         this.oUl=oUl;
         //假设圆锥的等差数列首项1 公差为2
@@ -141,7 +153,7 @@ define(function (require, exports, module) {
         }
 
         //假设圆锥沿Y中心轴切面时，边与Y轴夹角为30度,假设圆锥高度h=240px
-        var h1=200;
+        var h1=190;
         var h2=2000;
         var aLi = oUl.getElementsByTagName('li');
         for (var layer=1;layer<=layers;layer++) {
@@ -189,6 +201,7 @@ define(function (require, exports, module) {
             aLi[i].style.webkitTransform = aLi[i].minTransform;
             aLi[i].style.opacity = 1;
         }
+        this.state = 'in';//记录图形所处状态
     };
     Cone.prototype.out = function () {
         var aLi = this.oUl.getElementsByTagName('li');
@@ -197,6 +210,18 @@ define(function (require, exports, module) {
             aLi[i].style.webkitTransform = aLi[i].maxTransform;
             aLi[i].style.opacity = 0;
         }
+        this.state = 'out';//记录图形所处状态
+    };
+    Cone.prototype.rotateStart = function () {
+        var iNow=0;
+        var _this=this;
+        this.oUl.timer=setInterval(function () {
+            _this.oUl.style.transform = 'rotateX(' + (iNow+1) + 'deg)'+'rotateY(' + iNow + 'deg)'+'rotateZ(' + (iNow+2) + 'deg)';
+            iNow++;
+        },100);
+    };
+    Cone.prototype.rotateStop = function () {
+        clearInterval(this.oUl.timer);
     };
     //圆柱
     function Cylinder(oUl, sTxt) {
@@ -206,7 +231,7 @@ define(function (require, exports, module) {
     Cylinder.prototype.init = function (oUl, sTxt) {
         this.oUl = oUl;
         //假设假设圆柱高h=200，宽高比ratio=4:5,每层字数在18
-        var h1=210;
+        var h1=190;
         var h2=2000;
         var ratio=4/5;
         var layers = 0;
@@ -264,6 +289,7 @@ define(function (require, exports, module) {
             aLi[i].style.webkitTransform = aLi[i].minTransform;
             aLi[i].style.opacity = 1;
         }
+        this.state = 'in';//记录图形所处状态
     };
     Cylinder.prototype.out = function () {
         var aLi = this.oUl.getElementsByTagName('li');
@@ -272,19 +298,18 @@ define(function (require, exports, module) {
             aLi[i].style.webkitTransform = aLi[i].maxTransform;
             aLi[i].style.opacity = 0;
         }
+        this.state = 'out';//记录图形所处状态
     };
-    //正方体
-    function Cube() {
-    }
-
-    Cube.prototype.init = function () {
-
+    Cylinder.prototype.rotateStart = function () {
+        var iNow=0;
+        var _this=this;
+        this.oUl.timer=setInterval(function () {
+            _this.oUl.style.transform = 'rotateX(' + iNow + 'deg)'+'rotateY(' + (iNow+1) + 'deg)'+'rotateZ(' + (iNow+2) + 'deg)';
+            iNow++;
+        },100);
     };
-    Cube.prototype.in = function () {
-
-    };
-    Cube.prototype.out = function () {
-
+    Cylinder.prototype.rotateStop = function () {
+        clearInterval(this.oUl.timer);
     };
 
 });

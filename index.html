@@ -68,11 +68,11 @@
                 </h1>
             </div>
             <nav class="menu">
-                <a href="#index"><span>首页<em>HOME</em></span></a>
-                <a href="#project"><span>项目<em>PROJECT</em></span></a>
-                <a href="#skill"><span>技能<em>SKIL</em></span></a>
-                <a href="#record"><span>履历<em>RECORD</em></span></a>
-                <a href="#message"><span>留言<em>MESSAGE</em></span></a>
+                <!--<a href="#index"><span>首页<em>HOME</em></span></a>-->
+                <!--<a href="#project"><span>项目<em>PROJECT</em></span></a>-->
+                <!--<a href="#skill"><span>技能<em>SKIL</em></span></a>-->
+                <!--<a href="#record"><span>履历<em>RECORD</em></span></a>-->
+                <!--<a href="#message"><span>留言<em>MESSAGE</em></span></a>-->
             </nav>
         </header>
         <section id="index">
@@ -198,15 +198,37 @@
         </section>
         <section id="skill">
             <div class="cloud3d">
+                <div class="skill_board gradient">
+                    <h2>前端 <span>Front-end</span><em class="skill_board_close"></em></h2>
+                    <p>
+                        <strong>JavaScript</strong><br/>
+                        熟悉熟悉Javascript模块化、面向对象的方式编程；<br/>
+                        熟悉JQuery/Zepto、Bootstrap、NodeJs、EasyUI使用；<br/>
+                        了解AngularJs、Canvas、SVG。
+                    <p>
+                        <strong>Html5&Css3</strong><br/>
+                        了解HTML 5新标签的语义。<br/>
+                        熟练使用H5语义标签和Css3新特性制作炫酷页面效果；<br/>
+                        熟练编写兼容主流浏览器的PC端和移动端页面布局；<br/>
+                        熟练使用Chrome、Firefox、IE等浏览器开发者工具调试；
+                    </p>
+                    <p>
+                        <strong>Photoshop</strong><br/>
+                        熟悉Photoshop操作，具备基本图片处理和平面设计能力。<br/>
+                        能根据图片特征及Web页面需要存成最优的格式的图片。
+                    </p>
+                </div>
                 <ul class="ball" id="ball"></ul>
                 <ul class="cone" id="cone"></ul>
-                <ul class="cylinder" id="cylinder">
-                </ul>
+                <ul class="cylinder" id="cylinder"></ul>
+                <div class="click_layer">
+                </div>
                 <ul class="bts">
                     <li class="bt1"><p>前端</p></li>
                     <li class="bt2"><p>后台</p></li>
                     <li class="bt3"><p>数据库</p></li>
                 </ul>
+
             </div>
         </section>
         <section id="record"></section>
@@ -224,7 +246,7 @@
 <script>
     var importModule = ['./js/Global', './js/Loading', './js/Foldbox', './js/Brand',
         './js/Menu', './js/Index', './js/Project', './js/Skill'];
-    seajs.use(importModule, function (Global, Loading, Foldbox, Brand, Menu, Index, Project,Skill) {
+    seajs.use(importModule, function (Global, Loading, Foldbox, Brand, Menu, Index, Project, Skill) {
         /*全局的一些配置*/
         Global.init();
         /*加载动画*/
@@ -266,7 +288,7 @@
                 case 'project':
                     Project.in();
                     break;
-              case 'skill':
+                case 'skill':
                     Skill.in();
                     break;
 //                case 'Record':

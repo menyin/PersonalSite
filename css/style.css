@@ -153,7 +153,7 @@ body {
     transform: rotateX(-180deg);
     backface-visibility: hidden;
     border-bottom: 2px solid #f6e4e0;
-    box-shadow:0 0 2px #d1b0a7;
+    box-shadow: 0 0 2px #d1b0a7;
 
 }
 
@@ -166,9 +166,10 @@ div.foldbox_con {
     animation: foldopen 1s ease forwards;
     -webkit-animation: foldopen 1s ease forwards;
     tranform: rotate(0deg);
-    box-shadow:none;
+    box-shadow: none;
 }
-.foldbox>div {
+
+.foldbox > div {
     transform: rotateX(-119deg);
 }
 
@@ -242,7 +243,7 @@ div.foldbox_con {
     height: 100%;
     margin: -40px auto 0;
     position: relative;
-    overflow:hidden;
+    overflow: hidden;
     border: 1px solid red;
 }
 
@@ -302,6 +303,7 @@ div.foldbox_con {
     /*z-index: 6;*/
     position: absolute;
 }
+
 .menu a {
     width: 134px;
     height: 90px;
@@ -556,7 +558,7 @@ div.foldbox_con {
     width: 650px;
     height: 400px;
     left: 480px;
-    top:-460px;
+    top: -460px;
     opacity: 0;
     position: absolute;
     transform-style: preserve-3d;
@@ -659,7 +661,7 @@ div.foldbox_con {
 
 .blogs_wrap {
     width: 300px;
-    height:100%;
+    height: 100%;
     margin-left: 310px;
 }
 
@@ -683,48 +685,52 @@ div.foldbox_con {
     height: 160px;
     padding-left: 16px;
     padding-top: 4px;
-    margin-top:12px;
+    margin-top: 12px;
     background: url(../images/wirefont_bg.png) no-repeat left center;
 }
 
 .wirefont li {
     width: 100%;
     height: 25px;
-    color:#413235 ;
+    color: #413235;
     line-height: 26px;
-    position:relative;
+    position: relative;
     border-bottom: 1px dashed #c6c3b7;
 }
 
 .wirefont li em {
-    height:100%;
-    margin-left:-16px;
+    height: 100%;
+    margin-left: -16px;
     padding: 0 14px 0 22px;
     display: inline-block;
 }
-.wirefont li:hover em{
-    color:#ffffff;
+
+.wirefont li:hover em {
+    color: #ffffff;
     line-height: 24px;
-    background:url(../images/wirefont_em_bg.png) no-repeat left center;
+    background: url(../images/wirefont_em_bg.png) no-repeat left center;
 }
-.wirefont li a{
-    width:216px;
-    height:100%;
-    top:0;
-    right:0;
-    color:#413235 ;
-    position:absolute;
+
+.wirefont li a {
+    width: 216px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    color: #413235;
+    position: absolute;
 }
-.wirefont li a span{
-    width:12px;
-    height:12px;
+
+.wirefont li a span {
+    width: 12px;
+    height: 12px;
     line-height: 16px;
-    position:relative;
+    position: relative;
 }
+
 .blogs_more {
-    width:82px;
-    height:24px;
-    margin:16px 0 0 -21px;
+    width: 82px;
+    height: 24px;
+    margin: 16px 0 0 -21px;
     -webkit-transform-style: preserve-3d;
     -ms-transform-style: preserve-3d;
     transform-style: preserve-3d;
@@ -732,30 +738,33 @@ div.foldbox_con {
     z-index: 6;
 
 }
+
 .blogs_more p {
     width: 82px;
     height: 24px;
     color: #ffffff;
     padding-left: 36px;
     line-height: 22px;
-    transition:transform .5s;
+    transition: transform .5s;
     transform-origin: 4px center;
     perspective-origin: left center;
     background: url(../images/blogs_more.png) no-repeat left center;
 }
 
-.blogs_more:hover p{
+.blogs_more:hover p {
     transform: rotateY(-40deg);
 }
+
 .projects {
     width: 600px;
     height: 320px;
-    opacity:0;
-    left:40px;
+    opacity: 0;
+    left: 40px;
     bottom: -500px;
-    position:absolute;
-    z-index:5;
+    position: absolute;
+    z-index: 5;
 }
+
 .slideimg_box_three {
     width: 430px;
     height: 320px;
@@ -763,17 +772,19 @@ div.foldbox_con {
     position: relative;
 
 }
+
 .slideimg_box_three li {
     width: 280px;
     height: 310px;
-    position:absolute;
-    transform-style:preserve-3d;
+    position: absolute;
+    transform-style: preserve-3d;
 }
+
 .bt_prevent {
     width: 18px;
     height: 30px;
     left: 130px;
-    top:calc(50% - 28px);
+    top: calc(50% - 28px);
     z-index: 5;
     display: none;
     position: absolute;
@@ -784,52 +795,54 @@ div.foldbox_con {
     width: 18px;
     height: 30px;
     left: 310px;
-    top:calc(50% - 28px);
+    top: calc(50% - 28px);
     z-index: 5;
     display: none;
     position: absolute;
     background: url(../images/bt_next.png) no-repeat left center;
 }
-.projects:hover .bt_prevent,.projects:hover .bt_next {
-   display: block;
+
+.projects:hover .bt_prevent, .projects:hover .bt_next {
+    display: block;
 }
+
 /*.slideimg_box_three li:nth-of-type(1) {*/
-    /*top: 0;*/
-    /*left:75px;*/
-    /*z-index: 3;*/
-    /*opacity:1;*/
-    /*/!*filter: blur(0px);*!/*/
-    /*/!*-webkit-filter: blur(0px);*!/*/
-    /*transform: scale(1) translateZ(0px);*/
-    /*-webkit-transform: scale(1) translateZ(-0px);*/
+/*top: 0;*/
+/*left:75px;*/
+/*z-index: 3;*/
+/*opacity:1;*/
+/*/!*filter: blur(0px);*!/*/
+/*/!*-webkit-filter: blur(0px);*!/*/
+/*transform: scale(1) translateZ(0px);*/
+/*-webkit-transform: scale(1) translateZ(-0px);*/
 /*}*/
 /*.slideimg_box_three li:nth-of-type(2) {*/
-    /*top: 0;*/
-    /*left:-25px;*/
-    /*z-index: 2;*/
-    /*opacity:0.7;*/
-    /*/!*filter: blur(10px);*!/*/
-    /*/!*-webkit-filter: blur(10px);*!/*/
-    /*transform: scale(0.8) translateZ(-30000px);*/
-    /*-webkit-transform:  scale(0.8) translateZ(-30000px);*/
+/*top: 0;*/
+/*left:-25px;*/
+/*z-index: 2;*/
+/*opacity:0.7;*/
+/*/!*filter: blur(10px);*!/*/
+/*/!*-webkit-filter: blur(10px);*!/*/
+/*transform: scale(0.8) translateZ(-30000px);*/
+/*-webkit-transform:  scale(0.8) translateZ(-30000px);*/
 /*}*/
 /*.slideimg_box_three li:nth-of-type(3) {*/
-    /*top:0;*/
-    /*left:175px;*/
-    /*z-index: 2;*/
-    /*opacity:0.7;*/
-    /*/!*filter: blur(10px);*!/*/
-    /*/!*-webkit-filter: blur(10px);*!/*/
-    /*transform:scale(0.8) translateZ(-30000px);*/
-    /*-webkit-transform:scale(0.8) translateZ(-30000px);*/
+/*top:0;*/
+/*left:175px;*/
+/*z-index: 2;*/
+/*opacity:0.7;*/
+/*/!*filter: blur(10px);*!/*/
+/*/!*-webkit-filter: blur(10px);*!/*/
+/*transform:scale(0.8) translateZ(-30000px);*/
+/*-webkit-transform:scale(0.8) translateZ(-30000px);*/
 /*}*/
 .projects_title {
-    width:172px;
+    width: 172px;
     height: 76px;
-    bottom:-24px;
-    right:140px;
-    position:absolute;
-    z-index:4;
+    bottom: -24px;
+    right: 140px;
+    position: absolute;
+    z-index: 4;
 }
 
 .tip {
@@ -849,7 +862,9 @@ div.foldbox_con {
     /*position: absolute;*/
     /*overflow: hidden;*/
     /*background:gray;*/
+
 }
+
 .cloud3d {
     width: 1170px;
     height: 380px;
@@ -863,9 +878,78 @@ div.foldbox_con {
     /*position: relative;*/
     perspective: 800px;
     perspective-origin: center center;
-
-
+    border: 1px solid red;
 }
+
+.skill_board {
+    width: 400px;
+    top: 20px;
+    left: calc(50% - 200px);
+    position: absolute;
+    color: #f4264d;
+    perspective: 1000px;
+    /*overflow: hidden;*/
+    box-shadow: 0 0 10px rgba(1, 1, 1, 0.1);
+    -webkit-box-shadow: 0 0 10px rgba(1, 1, 1, 0.1);
+    transition:1s;
+    opacity: 0;
+}
+
+.skill_board h2 {
+    height: 40px;
+    line-height: 40px;
+    font-weight: normal;
+    padding-left: 36px;
+    position: relative;
+    background: url(../images/skill_board_ico.png) no-repeat 6px center;
+    /*border-bottom: 1px dashed red;*/
+    background:#fff4f2;
+    font-style: italic
+}
+
+.skill_board h2 span {
+    font-size: 12px;
+}
+.skill_board h2 .skill_board_close {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    top: calc(50% - 10px);
+    right:8px;
+    position: absolute;
+    transition:.5s;
+    background: url(../images/skill_board_close.png) no-repeat left center;
+}
+.skill_board h2 .skill_board_close:hover {
+    transform: rotateZ(360deg);
+}
+
+/*.skill_board:hover .skill_board_con {*/
+    /*transform: scale(1, 1);*/
+/*}*/
+.skill_board p {
+    padding: 2px 0 2px 36px;
+    margin: 4px 0;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+}
+
+.skill_board p:hover {
+    background: #ffe8e3;
+    transform: rotateY(10deg);
+    box-shadow: 0 0 100px rgba(1, 1, 1, 0.1);
+    transition: .3s;
+}
+
+.gradient {
+    background: -moz-linear-gradient(top, #FFFFFF, #ffe7e2);
+    background: -webkit-linear-gradient(top, #FFFFFF, #ffe7e2);
+    background: -ms-linear-gradient(top, #FFFFFF, #ffe7e2);
+    background: linear-gradient(top, #FFFFFF, #ffe7e2);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#FFFFFF, endColorstr=#ffe7e2)";
+}
+
 /*圆球*/
 .ball {
     width: 250px;
@@ -873,6 +957,7 @@ div.foldbox_con {
     margin: 0;
     padding: 0;
     /*background: gray;*/
+    cursor: pointer;
     list-style: none;
     top: 20px;
     left: calc(50% - 125px);
@@ -880,10 +965,11 @@ div.foldbox_con {
     transform-style: preserve-3d;
 
 }
+
 .ball li {
     width: 20px;
     height: 20px;
-    color:#ffffff;
+    color: #ffffff;
     text-shadow: 0 0 1px #c7c5c5;
     background: #e74773;
     top: calc(50% - 10px);
@@ -891,10 +977,11 @@ div.foldbox_con {
     position: absolute;
     transform-style: preserve-3d;
     transform-orign: center center;
-    text-align:center;
-    transition:1s ease;
+    text-align: center;
+    transition: 1s ease;
 
 }
+
 /*锥形*/
 .cone {
     width: 250px;
@@ -907,14 +994,14 @@ div.foldbox_con {
     left: calc(50% - 125px);
     position: absolute;
     transform-style: preserve-3d;
-    border: 1px solid red;
 }
+
 .cone li {
     width: 30px;
     height: 30px;
-    font-size:12px;
-    line-height:40px;
-    color:#ffffff;
+    font-size: 12px;
+    line-height: 40px;
+    color: #ffffff;
     text-shadow: 0 0 1px #c7c5c5;
     /*background: #e74773;*/
     background: url(../images/triangle.png) no-repeat center top;
@@ -923,11 +1010,11 @@ div.foldbox_con {
     position: absolute;
     transform-style: preserve-3d;
     transform-orign: center center;
-    text-align:center;
-    transition:1s ease;
-
+    text-align: center;
+    transition: 1s ease;
 
 }
+
 /*圆柱*/
 .cylinder {
     width: 300px;
@@ -940,14 +1027,14 @@ div.foldbox_con {
     left: calc(50% - 150px);
     position: absolute;
     transform-style: preserve-3d;
-    border: 1px solid red;
 }
+
 .cylinder li {
     width: 20px;
     height: 20px;
-    font-size:12px;
-    line-height:20px;
-    color:#ffffff;
+    font-size: 12px;
+    line-height: 20px;
+    color: #ffffff;
     background: #e74773;
     text-shadow: 0 0 1px #c7c5c5;
     /*background: #e74773;*/
@@ -956,31 +1043,34 @@ div.foldbox_con {
     position: absolute;
     transform-style: preserve-3d;
     transform-orign: center center;
-    text-align:center;
-    transition:1s ease;
+    text-align: center;
+    transition: 1s ease;
 }
+
 /*按钮*/
 .cloud3d .bts {
     width: 216px;
-    top:290px;
+    top: 310px;
     left: calc(50% - 108px);
-    position:absolute;
+    position: absolute;
 }
-.cloud3d .bts li{
+
+.cloud3d .bts li {
     width: 40px;
     height: 22px;
-    float:left;
-    font-size:14px;
-    margin:0 16px;
+    float: left;
+    font-size: 14px;
+    margin: 0 16px;
     cursor: pointer;
     text-align: center;
-    padding-top:48px;
-    position:relative;
-    transition:.2s;
+    padding-top: 48px;
+    position: relative;
+    transition: .2s;
 
 }
+
 .cloud3d .bts li:hover {
-    margin-top:-4px;
+    margin-top: -4px;
 }
 
 .cloud3d .bts li p {
@@ -991,28 +1081,36 @@ div.foldbox_con {
     position: absolute;
 }
 
-.cloud3d .bts li.bt1{
-    background:url(../images/ball.png) no-repeat left top;
-    background-size:contain;
-}
-.cloud3d .bts li.bt2{
-    background:url(../images/cone.png) no-repeat left top;
-    background-size:contain;
-}
-.cloud3d .bts li.bt3{
-    background:url(../images/cylinder.png) no-repeat left top;
-    background-size:contain;
+.cloud3d .bts li.bt1 {
+    background: url(../images/ball.png) no-repeat left top;
+    background-size: contain;
 }
 
+.cloud3d .bts li.bt2 {
+    background: url(../images/cone.png) no-repeat left top;
+    background-size: contain;
+}
+
+.cloud3d .bts li.bt3 {
+    background: url(../images/cylinder.png) no-repeat left top;
+    background-size: contain;
+}
+.click_layer {
+    width: 250px;
+    height: 250px;
+    z-index: 99;
+    cursor: pointer;
+    left: calc(50% - 125px);
+    position: absolute;
+}
 /*content end*/
 
-
 #ddddd {
-    width:300px;
-    height:300px;
-    background:red;
-    left:300px;
-    top:-500px;
-    position:absolute;
+    width: 300px;
+    height: 300px;
+    background: red;
+    left: 300px;
+    top: -500px;
+    position: absolute;
 }
 
