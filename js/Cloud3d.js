@@ -98,6 +98,7 @@ define(function (require, exports, module) {
                 return index;
             }
         }
+        this.state = 'out';//记录图形所处状态
     };
     Ball.prototype.in = function () {
         var aLi =  this.oUl.getElementsByTagName('li');
@@ -193,6 +194,7 @@ define(function (require, exports, module) {
             var layerPre=layer-1;
             return layerPre+layerPre*(layerPre-1)+num-1;
         }
+        this.state = 'out';//记录图形所处状态
     };
     Cone.prototype.in = function () {
         var aLi = this.oUl.getElementsByTagName('li');
@@ -274,6 +276,7 @@ define(function (require, exports, module) {
                 aLi[index].style.transform = transXYZ2 ;
                 aLi[index].style.webkitTransform = transXYZ2;
                 aLi[index].style.opacity = 0;
+
             }
         }
 
@@ -281,6 +284,7 @@ define(function (require, exports, module) {
         function getIndex(layer,num) {
             return (layer-1)*nums+num-1;
         }
+        this.state = 'out';//记录图形所处状态
     };
     Cylinder.prototype.in = function () {
         var aLi = this.oUl.getElementsByTagName('li');

@@ -878,7 +878,6 @@ div.foldbox_con {
     /*position: relative;*/
     perspective: 800px;
     perspective-origin: center center;
-    border: 1px solid red;
 }
 
 .skill_board {
@@ -1102,6 +1101,185 @@ div.foldbox_con {
     cursor: pointer;
     left: calc(50% - 125px);
     position: absolute;
+}
+
+
+.switch3d_wrap {
+    top:-1000px;
+    left:0;
+    position:absolute;
+}
+.switch3d_bts {
+    position: fixed;
+    height: 120px;
+    left: 0;
+    top: calc(50% - 60px);
+}
+
+.switch3d_bts li {
+    width: 80px;
+    height: 24px;
+    margin: 3px 0;
+    background: #ffffff;
+    /*text-align: right;*/
+    padding-right: 10px;
+    font: 12px/24px "微软雅黑";
+    color: #333;
+    position: relative;
+    left: -90px;
+    transition: .5s;
+    cursor: pointer;
+    position: relative;
+    -webkit-border-radius: 0 4px 4px 0;
+    border-radius: 0 4px 4px 0;
+    overflow: hidden;
+    -webkit-box-shadow: 0 0 2px rgba(1, 1, 1, 0.1);
+    box-shadow: 0 0 2px rgba(1, 1, 1, 0.1);
+    padding-right: 30px;
+    padding-left: 4px;
+    text-align: left;
+}
+
+.switch3d_bts li:hover, .switch3d_bts .active {
+    left: 0;
+}
+
+.switch3d_bts .active {
+    /* background:#9F0;*/
+}
+
+.switch3d_bts li span {
+    width: 24px;
+    height: 24px;
+    top: 0;
+    right: 0;
+    background: #7c7574;
+    position: absolute;
+    text-align: center;
+    line-height: 24px;
+}
+
+.switch3d_bts li:hover span, .switch3d_bts .active span {
+    background: rgba(255, 35, 71, 0.8);
+}
+
+.switch3d {
+    width: 100%;
+    height: 400px;
+    margin: 40px auto;
+    -webkit-perspective: 400px;
+}
+
+.switch3d ul {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    transition: .5s;
+    -webkit-transform-origin: center center 400px;
+}
+
+.switch3d li {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    /*font: bold 100px/400px Arial;*/
+    color: #fff;
+    text-align: center;
+    left: -100%;
+    opacity: 1;
+}
+
+.switch3d li div {
+    display: block;
+    height: 400px;
+    width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+.switch3d .next {
+    left: 100%;
+    -webkit-transform-origin: left;
+    -webkit-transform: rotateY(-90deg);
+    opacity: 1;
+}
+
+.switch3d .prev {
+    left: -100%;
+    -webkit-transform-origin: right;
+    -webkit-transform: rotateY(90deg);
+    opacity: 1;
+}
+
+.switch3d .active {
+    -webkit-transform: rotateY(0deg);
+    left: 0;
+    opacity: 1;
+}
+
+.switch3d li:nth-of-type(1) div {
+    background: url(record_bg1.png) repeat left top;
+}
+
+.switch3d li:nth-of-type(2) div {
+    background: url(record_bg2.png) repeat left top;
+}
+
+.switch3d li:nth-of-type(3) div {
+    background: url(record_bg3.png) repeat left top;
+}
+
+.switch3d li:nth-of-type(4) div {
+    background: url(record_bg4.png) repeat left top;
+}
+
+.switch3d li h2 {
+    height: 30px;
+    margin: 20px 0 10px 150px;
+    font: normal 26px/30px Arial;
+}
+.switch3d li div p {
+    width: 490px;
+    text-align: left;
+    text-indent:2em;
+    margin-left:250px;
+}
+.switch3d li h2 span {
+    font: normal 16px/30px Arial;
+}
+
+.switch3d .line {
+    width: 2000px;
+    height: 2px;
+    top:0;
+    left:0;
+    position:absolute;
+    background: #ffffff;
+    transform: rotateZ(100deg);
+    transform-origin: 240px center;
+    border:none;
+}
+.switch3d .flag {
+    width: 300px;
+    height: 252px;
+    top:0;
+    left:-40px;
+    position:absolute;
+    background-size:contain;
+}
+.switch3d .flag img{
+    width: 100%;
+}
+.switch3d .flag .record_logo {
+    width: 60px;
+    top:100px;
+    left: 140px;
+    position:absolute;
 }
 /*content end*/
 

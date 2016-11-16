@@ -9,12 +9,16 @@ define(function (require, exports, module) {
         var Cloud3d = require('./Cloud3d');
         var aLiBt = $('.cloud3d .bts li');
         var board = new Board();
+        this.board=board;
         var _this=this;
         //圆球初始化
         var oUlBall = document.getElementById('ball');
         var sTxtBall = '熟悉模块化面向对象的方式编程熟悉Javascript编写过Javascript运动类库熟悉JQueryZeptoBootstrapNodeJsEasyUI使用了解AngularJs';
         this.ball=new Cloud3d.Ball(oUlBall,sTxtBall);
         aLiBt.eq(0).click(function () {
+            if (_this.board.state=='in') {
+                _this.board.out();
+            }
             if (_this.ball.state=='out') {
                 if (_this.cone.state=='in'||_this.cylinder.state=='in') {
                     _this.cone.out();
@@ -35,6 +39,9 @@ define(function (require, exports, module) {
         var sTxtCone = '熟悉模块化面向对象的方式编程熟悉Javascript编写过Javascript运动类库熟悉使用了解AngularJs';
         this.cone=new Cloud3d.Cone(oUlCone,sTxtCone);
         aLiBt.eq(1).click(function () {
+            if (_this.board.state=='in') {
+                _this.board.out();
+            }
             if (_this.cone.state=='out') {
                 if (_this.ball.state=='in'||_this.cylinder.state=='in') {
                     _this.ball.out();
@@ -91,7 +98,7 @@ define(function (require, exports, module) {
                     board.closeCallback = function () {
                         _this.cone.in();
                     };
-                    var sHtml = '<h2 >后台 <span>C#&&Java</span><em class="skill_board_close"></em></h2><div class="skill_board_con gradient"><p><strong>JavaScript</strong><br/>熟悉熟悉Javascript模块化、面向对象的方式编程；<br/>熟悉JQuery/Zepto、Bootstrap、NodeJs、EasyUI使用；<br/>了解AngularJs、Canvas、SVG。<p><strong>Html5&Css3</strong><br/>了解HTML 5新标签的语义。<br/>熟练使用H5语义标签和Css3新特性制作炫酷页面效果；<br/>熟练编写兼容主流浏览器的PC端和移动端页面布局；<br/>熟练使用Chrome、Firefox、IE等浏览器开发者工具调试；</p><p><strong>Photoshop</strong><br/>熟悉Photoshop操作，具备基本图片处理和平面设计能力。<br/>能根据图片特征及Web页面需要存成最优的格式的图片。</p></div>';
+                    var sHtml = '<h2 >后台 <span>C#&&Java</span><em class="skill_board_close"></em></h2><div class="skill_board_con gradient"><p><strong>Asp.net</strong><br/>熟悉Http请求响应原理和Asp.net生命周期；<br/>熟悉WebForm、MVC、EF架构及VS开发环境；<br/>熟悉C#语法,掌握委托、反射、多线程等高级特性使用；<p><strong>Java</strong>了解基本Java语法及原理，能运用现有架构编写业务模块代码。</p></div>';
                     board.init(sHtml);
                     board.in();
                 },1000);
@@ -102,7 +109,7 @@ define(function (require, exports, module) {
                     board.closeCallback = function () {
                         _this.cylinder.in();
                     };
-                    var sHtml = '<h2 >数据库 <span>SqlServer&&Other</span><em class="skill_board_close"></em></h2><div class="skill_board_con gradient"><p><strong>JavaScript</strong><br/>熟悉熟悉Javascript模块化、面向对象的方式编程；<br/>熟悉JQuery/Zepto、Bootstrap、NodeJs、EasyUI使用；<br/>了解AngularJs、Canvas、SVG。<p><strong>Html5&Css3</strong><br/>了解HTML 5新标签的语义。<br/>熟练使用H5语义标签和Css3新特性制作炫酷页面效果；<br/>熟练编写兼容主流浏览器的PC端和移动端页面布局；<br/>熟练使用Chrome、Firefox、IE等浏览器开发者工具调试；</p><p><strong>Photoshop</strong><br/>熟悉Photoshop操作，具备基本图片处理和平面设计能力。<br/>能根据图片特征及Web页面需要存成最优的格式的图片。</p></div>';
+                    var sHtml = '<h2 >数据库 <span>Database&&Other</span><em class="skill_board_close"></em></h2><div class="skill_board_con gradient"><p><strong>Database</strong><br/>能编写基本的增删改查Sql语句、存储过程、视图。<br/>熟悉Sqlserver、Oracle、MongoDB、Sqlite数据库基本操作。<p><strong>Other</strong>能用PowerDesigner设计出概念模型和物理模型并生成相关文档。</p></div>';
                     board.init(sHtml);
                     board.in();
                 },1000);
