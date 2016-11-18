@@ -33,7 +33,7 @@ define(function (require, exports, module) {
         function tab(iOld, iNow) {
             oList.style.transition = ".8s";
             oList.addEventListener("webkitTransitionEnd", end, false);
-            oList.addEventListener("transitionEnd", end, false);
+            oList.addEventListener("transitionend", end);
             if (iOld > iNow) {
                 aLi[iNow].className = "prev";
                 oList.style.WebkitTransform = "rotateY(-90deg)";
@@ -45,11 +45,11 @@ define(function (require, exports, module) {
                 oList.style.transform = "rotateY(90deg)";
             }
             function end() {
-                aLi[iOld].className = "";
-                oList.style.transition = "none";
-                aLi[iNow].className = "active";
-                oList.style.WebkitTransform = "rotateY(0deg)";
-                oList.style.transform = "rotateY(0deg)";
+                    aLi[iOld].className = "";
+                    oList.style.transition = "none";
+                    aLi[iNow].className = "active";
+                    oList.style.WebkitTransform = "rotateY(0deg)";
+                    oList.style.transform = "rotateY(0deg)";
             }
         }
     };

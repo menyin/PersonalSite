@@ -121,7 +121,7 @@ define(function (require, exports, module) {
     Skill.in= function (endCallback) {
         $('#main').css('background', '#413235 url(images/main_bg2.jpg) no-repeat center top');
         var _this=this;
-        $('.cloud3d').animate({top: 140},800,'swing', function () {
+        $('.cloud3d').animate({top: 140,opacity:1},800,'swing', function () {
             _this.ball.in();
             _this.ball.rotateStart();
             _this.cone.rotateStart();
@@ -129,7 +129,7 @@ define(function (require, exports, module) {
         });
     };
     Skill.out= function (endCallback) {
-        $('.cloud3d').animate({top: -500},800,'swing');
+        $('.cloud3d').animate({top: -500,opacity:0},800,'swing');
     };
     //面板
     function Board() {
