@@ -283,7 +283,30 @@
             </div>
         </section>
 
-        <section id="message"></section>
+        <section id="message">
+            <div class="msgboard">
+                <h2 class="msgboard_title">留言回复</h2>
+                <ul class="msgboard_list" id="msgboard_list">
+                    <!--<li class="msgboard_item">-->
+                    <!--<div class="msg_phto"><img src="images/msg_phto1.png" alt=""/></div>-->
+                    <!--<div class="msg_point"></div>-->
+                    <!--<div class="msg_con">好好学习天天向上</div>-->
+                    <!--<div class="msg_reply">有道理有道理，做一个IT精英</div>-->
+                    <!--</li>-->
+                </ul>
+                <div class="msgboard_footer" id="msgboard_footer">
+                    <!--<a href="javascript:;">首页</a>-->
+                    <!--<a href="javascript:;">上一页</a>-->
+                    <!--<a href="javascript:;">1</a>-->
+                    <!--<a href="javascript:;">2</a>-->
+                    <!--<a href="javascript:;">3</a>-->
+                    <!--<a href="javascript:;">4</a>-->
+                    <!--<a href="javascript:;">5</a>-->
+                    <!--<a href="javascript:;">下一页</a>-->
+                    <!--<a href="javascript:;">末页</a>-->
+                </div>
+            </div>
+        </section>
         <footer id="footer">
             页脚
         </footer>
@@ -297,8 +320,8 @@
 <script src="js/sea.js"></script>
 <script>
     var importModule = ['./js/Global', './js/Loading', './js/Foldbox', './js/Brand',
-        './js/Menu', './js/Index', './js/Project', './js/Skill', './js/Record'];
-    seajs.use(importModule, function (Global, Loading, Foldbox, Brand, Menu, Index, Project, Skill,Record) {
+        './js/Menu', './js/Index', './js/Project', './js/Skill', './js/Record', './js/Message'];
+    seajs.use(importModule, function (Global, Loading, Foldbox, Brand, Menu, Index, Project, Skill,Record,Message) {
         /*全局的一些配置*/
         Global.init();
         /*加载动画*/
@@ -346,9 +369,9 @@
                 case 'record':
                   Record.in();
                   break;
-//                case 'Message':
-//                    Message.in();
-//                    break;
+                case 'message':
+                    Message.in();
+                    break;
             }
             if (endCallback) {
                 endCallback();
@@ -369,9 +392,9 @@
                 case 'record':
                     Record.out();
                     break;
-//                case 'Message':
-//                    Index.out();
-//                    break;
+                case 'message':
+                    Message.out();
+                    break;
             }
             if (endCallback) {
                 endCallback();

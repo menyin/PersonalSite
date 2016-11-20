@@ -211,6 +211,7 @@ div.foldbox_con {
     height: 18px;
     right: 60px;
     bottom: 100px;
+    z-index:99;
     position: fixed;
     border: 6px solid rgba(0, 0, 0, 0.6);
     background: rgba(0, 0, 0, 0.6) url(../images/qr_code_litte_bg.png) no-repeat left center;
@@ -244,7 +245,7 @@ div.foldbox_con {
     margin: -40px auto 0;
     position: relative;
     /*record页面要求显示，注释掉overflow*/
-    /*overflow: hidden;*/
+    overflow: hidden;
     border: 1px solid red;
 }
 
@@ -1211,6 +1212,8 @@ div.foldbox_con {
     margin: 0 auto;
     overflow: hidden;
     position: relative;
+    border-radius:10px;
+    box-shadow: 0 0 10px rgba(20, 20, 20, 0.3);
 }
 
 
@@ -1298,6 +1301,121 @@ div.foldbox_con {
     top:100px;
     left: 140px;
     position:absolute;
+}
+
+.msgboard {
+    width: 600px;
+    /*margin: 30px auto 0 auto;*/
+    opacity:0;
+    top: -1000px;
+    left: calc(50% - 200px);
+    position: absolute;
+}
+
+.msgboard_title, .msgboard_footer {
+    width: 574px;
+    height: 30px;
+    color:#956872;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 30px;
+    border-radius: 4px;
+    padding-left: 26px;
+    background: #ffffff;
+    margin-bottom: 30px;
+    box-shadow: 0 0 4px rgba(1, 1, 1, 0.1);
+}
+
+.msgboard_footer {
+    text-align: center;
+}
+
+.msgboard_footer a {
+    height: 16px;
+    padding: 2px;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 2px 4px;
+    border-radius: 2px;
+    display: inline-block;
+    background: #d5ccc8;
+    box-shadow: 0 0 2px gray;
+}
+
+.msgboard_footer a:hover, .msgboard_footer a.active {
+    box-shadow: 0 0 4px gray inset;
+}
+
+.msgboard_list {
+    /*border: 1px solid red;*/
+    overflow: hidden;
+    /*transition:5s;*/
+    /*-webkit-transition: 5s;*/
+    perspective: 800px;
+}
+
+.msgboard_item {
+    width: 500px;
+    height: 200px;
+    padding-top:10px;
+    margin: 0 0 0 100px;
+    position: relative;
+    border-left: 2px solid #ffffff;
+    transform: rotateY(90deg);
+    transform-style: preserve-3d;
+    transform-origin: left center;
+}
+
+.msg_phto {
+    width: 60px;
+    height: 60px;
+    line-height: 54px;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 50%;
+    border: 8px solid #fff;
+    box-shadow: 0 0 4px rgba(1, 1, 1, 0.1);
+    top: 0;
+    left: -100px;
+    position: absolute;
+
+}
+
+.msg_point {
+    width: 10px;
+    height: 10px;
+    background: #e52e2e;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    box-shadow: 0 0 4px rgba(1, 1, 1, 0.1);
+    top: 32px;
+    left: -10px;
+    position: absolute;
+}
+
+.msg_con, .msg_reply {
+    width: 418px;
+    height: 58px;
+    font-size: 12px;
+    color: #956872;
+    padding: 6px;
+    border-radius: 4px;
+    background: #fff4f2;
+    border: 8px solid #ffffff;
+    box-shadow: 0 0 4px rgba(1, 1, 1, 0.1);
+    top: 0;
+    left: 30px;
+    position: absolute;
+}
+
+.msg_reply {
+    top: 94px;
+    left: 30px;
+    position: absolute;
+    transform: rotateX(-179deg);
+    transform-style: preserve-3d;
+    transform-origin: center top;
+
 }
 /*content end*/
 

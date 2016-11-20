@@ -23,12 +23,11 @@ define(function (require, exports, module) {
         });
     };
     Record.out = function (endCallback) {
-        $('.switch3d_bts').animate({top:-200}, 800, 'swing', function () {
-            $('.switch3d_wrap').animate({top: -1000}, 1200, 'swing', function () {
-                if (endCallback) {
-                    endCallback();
-                }
-            });
+        $('.switch3d_bts').animate({top:-200}, 800, 'swing');
+        $('.switch3d_wrap').animate({top: -1000}, 800, 'swing', function () {
+            if (endCallback) {
+                endCallback();
+            }
         });
     };
 });
