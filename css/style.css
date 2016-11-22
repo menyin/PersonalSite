@@ -99,7 +99,6 @@ body {
 .load_img5 {
     background: url(../images/loading5.png) no-repeat left center;
 }
-
 /*loading end*/
 
 /*main begin*/
@@ -109,7 +108,6 @@ body {
     display: none;
     background: #413235 url(../images/main_bg.jpg) no-repeat center top;
 }
-
 /*main begin*/
 
 /*foldbox begin*/
@@ -123,7 +121,6 @@ body {
     cursor: pointer;
     z-index: 99;
 }
-
 .foldbox_title {
     width: 92px;
     height: 28px;
@@ -136,7 +133,6 @@ body {
     transform: translateZ(1px);
     background: url(../images/foldbox_bg.png) no-repeat left top;
 }
-
 .foldbox div {
     width: 146px;
     height: 30px;
@@ -156,23 +152,19 @@ body {
     box-shadow: 0 0 2px #d1b0a7;
 
 }
-
 div.foldbox_con {
     top: 54px;
     /*transform: rotateX(-90deg) translateZ(-30px);*/
 }
-
 .foldbox div.foldopen {
     animation: foldopen 1s ease forwards;
     -webkit-animation: foldopen 1s ease forwards;
     tranform: rotate(0deg);
     box-shadow: none;
 }
-
 .foldbox > div {
     transform: rotateX(-119deg);
 }
-
 .foldbox div span {
     width: 100%;
     height: 100%;
@@ -180,7 +172,6 @@ div.foldbox_con {
     text-indent: 6px;
     transition: .3s;
 }
-
 .foldbox div span:hover {
     color: #ffffff;
     text-indent: 10px;
@@ -246,7 +237,6 @@ div.foldbox_con {
     position: relative;
     /*record页面要求显示，注释掉overflow*/
     overflow: hidden;
-    border: 1px solid red;
 }
 
 /*header begin*/
@@ -870,7 +860,6 @@ div.foldbox_con {
     opacity:0;
     left: calc(50% - 585px);
     position:absolute;
-    border:1px solid red;
     perspective:1000px;
 
 }
@@ -1647,6 +1636,27 @@ div.foldbox_con {
 }
 /*message end*/
 
+/*footer begin*/
+#footer {
+    width: 1170px;
+    height: 90px;
+    left: calc(50% - 585px);
+    bottom:0;
+    position: absolute;
+}
+#footer p ,#footer div{
+    color: #8a8284;
+    font-size:12px;
+    text-align: center;
+    margin:30px auto 10px auto;
+}
+#footer p span {
+    margin:0 6px;
+}
+#footer div{
+     margin:0 auto;
+ }
+/*footer end*/
 /*content end*/
 
 

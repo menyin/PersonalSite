@@ -46,6 +46,7 @@ define(function (require, exports, module) {
                 iNow++;
                 if (iNow==_this.aLiArray.length-1) {
                     clearInterval(timer);
+                    _this.state = 'in';
                     if (endCallback) {
                         endCallback();
                     }
@@ -64,7 +65,8 @@ define(function (require, exports, module) {
                 iNow++;
                 if (iNow == _this.aLiArray.length - 1) {
                     clearInterval(timer);
-                    $(this.oCircle3dUl).css({top: -1000});
+                    _this.state = 'out';
+                    $(_this.oCircle3dUl).css({top: -1000});
                     if (endCallback) {
                         endCallback();
                     }

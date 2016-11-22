@@ -55,18 +55,22 @@ define(function (require, exports, module) {
         }
     };
     SwitchImg.prototype.in= function (endCallback) {
+        var _this=this;
         this.switchimg.css({top: 210}).animate({opacity: 1}, 'easeOut', function () {
+            _this.state = 'in';
             if (endCallback) {
                 endCallback();
             }
         });
     }
-    SwitchImg.prototype.out= function (data) {
+    SwitchImg.prototype.out = function (data) {
+        _this=this;
         this.switchimg.animate({opacity: 1}, 'easeOut', function () {
             this.css({top: -1000});
+            _this.state = 'out';
             if (endCallback) {
                 endCallback();
             }
         });
-    }
+    };
 });
