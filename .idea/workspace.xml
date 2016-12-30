@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ccb0c51f-4e63-4cf6-be9b-85e7829ec998" name="默认的" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Circle3d.js" afterPath="$PROJECT_DIR$/js/Circle3d.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Cloud3d.js" afterPath="$PROJECT_DIR$/js/Cloud3d.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Project.js" afterPath="$PROJECT_DIR$/js/Project.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Skill.js" afterPath="$PROJECT_DIR$/js/Skill.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/SwitchImg.js" afterPath="$PROJECT_DIR$/js/SwitchImg.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="ccb0c51f-4e63-4cf6-be9b-85e7829ec998" name="默认的" comment="" />
     <ignored path="PersonalSite.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -400,7 +391,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SeaJs_Test" />
+    <property name="last_opened_file_path" value="E:/mescakestatic-master/mescakestatic-master" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
