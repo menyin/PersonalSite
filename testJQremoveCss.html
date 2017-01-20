@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #dv {
+            width:100px;
+            height:200px;
+            background:red;
+        }
+    </style>
+</head>
+<body>
+<input type="button" class="bt" value="按钮"/>
+<div id="dv"></div>
+</body>
+</html>
+<script src="js/jquery-1.11.1.js"></script>
+<script >
+    $('.bt').click(function () {
+        $('#dv').css('width', '');
+    });
+</script>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #part {
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            position: relative;
+            border: 1px solid red;
+        }
+        #child {
+            width: 100px;
+            height: 100px;
+            top: 0;
+            left:0;
+            position: absolute;
+            border: 1px solid red;
+            background: red;
+        }
+    </style>
+    <script src="js/jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            $('#bt').click(function () {
+                $('#child').css({
+//                    'top':10,
+//                    'left': 'calc(50%-50px)',
+                    transform:'scale(0.5) translateZ(-30000px)'
+//                    webkitFilter: 'blur(0px)'
+//                    filter: 'blur(0px)'
+                });
+            });
+        });
+    </script>
+
+</head>
+<body>
+<input type="button" id="bt"/>
+<div id="part">
+    <div id="child"></div>
+</div>
+</body>
+</html>
