@@ -96,7 +96,7 @@ define(function (require, exports, module) {
                     board.closeCallback = function () {
                         _this.ball.in();
                     };
-                    var sHtml = '<h2 >前端 <span>H5&&JavaScript</span><em class="skill_board_close"></em></h2><p><strong>JavaScript</strong><br/>熟悉熟悉Javascript模块化、面向对象的方式编程；<br/>熟悉JQuery/Zepto、Bootstrap、NodeJs、EasyUI使用；<br/>了解AngularJs、Canvas、SVG。<p><strong>Html5&Css3</strong><br/>了解HTML 5新标签的语义。<br/>熟练使用H5语义标签和Css3新特性制作炫酷页面效果；<br/>熟练编写兼容主流浏览器的PC端和移动端页面布局；<br/>熟练使用Chrome、Firefox、IE等浏览器开发者工具调试；</p><p><strong>Photoshop</strong><br/>熟悉Photoshop操作，具备基本图片处理和平面设计能力。<br/>能根据图片特征及Web页面需要存成最优的格式的图片。</p>';
+                    var sHtml = '<h2 >前端 <span>H5&&JavaScript</span><em class="skill_board_close"></em></h2><p><strong>JavaScript</strong><br/> 熟悉Js模块化、面向对象、编写公司业务前端框架；<br/>熟悉JQuery/Zepto、Bootstrap、NodeJs、EasyUI使用；<br/>使用过PhoneGap、AngularJs、BackBone、JqueryMobile。<p><strong>Html5&Css3</strong><br/>了解HTML 5新标签的语义。<br/>熟练使用H5语义标签和Css3新特性制作炫酷页面效果；<br/>熟练编写兼容主流浏览器的PC端和移动端页面布局；<br/>熟练使用Chrome、Firefox、IE等浏览器开发者工具调试；</p><p><strong>Photoshop</strong><br/>熟悉Photoshop操作，具备基本图片处理和平面设计能力。<br/>能根据图片特征及Web页面需要存成最优的格式的图片。</p>';
                     board.init(sHtml);
                     board.in(function () {
                         $('.click_layer').css('display', 'none');
@@ -122,7 +122,7 @@ define(function (require, exports, module) {
                     board.closeCallback = function () {
                         _this.cylinder.in();
                     };
-                    var sHtml = '<h2 >数据库 <span>Database&&Other</span><em class="skill_board_close"></em></h2><div class="skill_board_con gradient"><p><strong>Database</strong><br/>能编写基本的增删改查Sql语句、存储过程、视图。<br/>熟悉Sqlserver、Oracle、MongoDB、Sqlite数据库基本操作。<p><strong>Other</strong>能用PowerDesigner设计出概念模型和物理模型并生成相关文档。</p></div>';
+                    var sHtml = '<h2 >数据库 <span>Database&&Other</span><em class="skill_board_close"></em></h2><div class="skill_board_con gradient"><p><strong>Database</strong><br/>能编写基本的增删改查Sql语句、存储过程、视图。<br/>熟悉Sqlserver，了解Oracle、MongoDB、Sqlite数据库基本操作。<p><strong>Other</strong>能用PowerDesigner设计出概念模型和物理模型并生成相关文档。</p></div>';
                     board.init(sHtml);
                     board.in(function () {
                         $('.click_layer').css('display', 'none');
