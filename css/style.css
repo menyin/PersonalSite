@@ -265,19 +265,28 @@ div.foldbox_con {
     box-shadow: 0 4px 6px #bdbcbc;
 
 }
+.brand_logo {
+    width: 120px;
+    left: 80px;
+    top: 136px;
+    position: absolute;
+}
+.brand_logo img{
+    width: 100%;
+}
 
 .brand_address {
     width: 220px;
     height: 40px;
     color: #ec556d;
-    font-size: 28px;
-    top: 130px;
-    left: 30px;
+    font-size: 20px;
+    top: 196px;
+    left: 70px;
     position: absolute;
     font-weight: bolder;
     padding-bottom: 30px;
     transition: bacground 1s;
-    background: url(../images/logo.png) no-repeat center 36px;
+    /*background: url(../images/logo.png) no-repeat center 36px;*/
     text-align: left;
 }
 
